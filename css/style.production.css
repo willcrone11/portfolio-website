@@ -1,5 +1,5 @@
 body  {
-  background-color: #ffffff;
+  background-color: #4265ff;;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,7 +12,7 @@ h2 {
 }
 
 a {
-  color: #489c79;
+  color: #000100;
   font-size: 20px;
   line-height: normal;
 }
@@ -32,7 +32,7 @@ p {
 
 a:visited {
   /* visited link */
-  color: #05676e;
+  color: #f4fff9;
 }
 
 a:hover, a:focus {
@@ -41,7 +41,7 @@ a:hover, a:focus {
 }
   
 a:active {
-  color: #00895c;
+  color: #fcf8f8;
 }
 
 .button {
@@ -88,11 +88,26 @@ transition-property: opacity;
   text-decoration: none;
 }
 
-.profile__portrait {
+#profile__portrait {
   float: left;
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 25%;
+  border-top-left-radius: 25%;
+}
+
+#momo_portrait {
+  float: right;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 10%;
 }
 
 .page-footer {
@@ -102,6 +117,40 @@ transition-property: opacity;
 .profile {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.profile-container {
+  background-color: #a6bbe2;
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+.profile-container-about {
+  background-color: #a6bbe2;
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.profile-container-contact {
+  background-color: #a6bbe2;
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 
 * {
@@ -144,6 +193,10 @@ transition-property: opacity;
 
 #logo {
   margin: auto;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 
 .navigation-list {
@@ -159,7 +212,11 @@ transition-property: opacity;
 .grid__item {
   display: inline-block;
   width: 33%;
-  background-color: #fceab8;
+  background-color: #a6bbe2;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
  }
  /* end grid fallback */
 
@@ -173,10 +230,15 @@ transition-property: opacity;
   }
 
   .grid__item {
-  background-color: #fceab8;
+  background-color: #a6bbe2;
   width: auto;
   min-height: auto;
-  margin: 0;
+  margin: 10px;
+  padding: 30px;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   }
 }
 
@@ -240,4 +302,5 @@ transition-property: opacity;
           animation-direction: alternate;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
 }

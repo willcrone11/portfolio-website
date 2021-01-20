@@ -9,11 +9,11 @@ Secondary Color: #e0b354;
 :root {
   --primary-color: #5374c4;
   --secondary-color: #e0b354;
-  --webpage-background: #ffffff;
-  --default-link: #4c5dc0;
-  --visited-link: #05676e;
-  --active-link: #00895c;
-  --grid-color:  #fceab8;
+  --webpage-background: #4265ff;
+  --default-link: #000100;
+  --visited-link: #f4fff9;
+  --active-link: #fcf8f8;
+  --grid-color:  #a6bbe2;
   --button-border: #0000004d;
   --button-text: #2b2b2b;
  }
@@ -98,11 +98,26 @@ a:active {
   text-decoration: none;
 }
 
-.profile__portrait {
+#profile__portrait {
   float: left;
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 25%;
+  border-top-left-radius: 25%;
+}
+
+#momo_portrait {
+  float: right;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 10%;
 }
 
 .page-footer {
@@ -112,6 +127,40 @@ a:active {
 .profile {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.profile-container {
+  background-color: var(--grid-color);
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+.profile-container-about {
+  background-color: #a6bbe2;
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.profile-container-contact {
+  background-color: var(--grid-color);
+  height: 350px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 
 * {
@@ -142,6 +191,10 @@ a:active {
 
 #logo {
   margin: auto;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 
 .navigation-list {
@@ -158,6 +211,10 @@ a:active {
   display: inline-block;
   width: 33%;
   background-color: var(--grid-color);
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
  }
  /* end grid fallback */
 
@@ -172,7 +229,12 @@ a:active {
   background-color: var(--grid-color);
   width: auto;
   min-height: auto;
-  margin: 0;
+  margin: 10px;
+  padding: 30px;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   }
 }
 
