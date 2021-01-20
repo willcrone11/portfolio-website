@@ -103,10 +103,10 @@ a:active {
   max-width: 250px;
   margin-right: 25px;
   margin-left: 25px;
-  padding: 25px;
+  padding-top: 15px;
   border-radius: 50%;
   border-top-right-radius: 15%;
-  border-bottom-left-radius: 10%;
+  border-bottom-left-radius: 0%;
   border-bottom-right-radius: 25%;
   border-top-left-radius: 25%;
 }
@@ -116,11 +116,12 @@ a:active {
   max-width: 250px;
   margin-right: 25px;
   margin-left: 25px;
+  padding-top: 15px;
   border-radius: 50%;
   border-top-right-radius: 25%;
   border-bottom-left-radius: 25%;
   border-bottom-right-radius: 0%;
-  border-top-left-radius: 10%;
+  border-top-left-radius: 15%;
 }
 
 .page-footer {
@@ -139,10 +140,10 @@ a:active {
   margin-right: 75px;
   text-align: center;
   min-width: 300px;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
 }
 
 .profile-container-about {
@@ -203,6 +204,7 @@ a:active {
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  max-height: 60px;
 }
 
 .navigation-list {
