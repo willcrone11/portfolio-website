@@ -93,10 +93,9 @@ transition-property: opacity;
   max-width: 250px;
   margin-right: 25px;
   margin-left: 25px;
-  padding: 25px;
   border-radius: 50%;
   border-top-right-radius: 15%;
-  border-bottom-left-radius: 10%;
+  border-bottom-left-radius: 0%;
   border-bottom-right-radius: 25%;
   border-top-left-radius: 25%;
 }
