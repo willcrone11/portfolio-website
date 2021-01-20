@@ -149,8 +149,6 @@ a:active {
 .profile-container-about {
   background-color: var(--grid-color);
   height: 800px;
-  margin-left: 25px;
-  margin-right: 25px;
   text-align: center;
   min-width: 400px;
   border-top-left-radius: 20%;
