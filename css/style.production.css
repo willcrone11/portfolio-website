@@ -22,10 +22,6 @@ p {
   line-height: normal;
 }  
 
-.center {
-  text-align: center;
-}
-
 #table {
   margin: auto;
 }
@@ -138,8 +134,6 @@ transition-property: opacity;
 
 .profile-container-about {
   background-color: #a6bbe2;
-  height: 800px;
-  text-align: center;
   margin-left: 10px;
   margin-right: 10px;
   min-width: 400px;
@@ -147,6 +141,11 @@ transition-property: opacity;
   border-bottom-right-radius: 20%;
   border-top-right-radius: 20%;
   border-bottom-left-radius: 20%;
+  text-align: center;
+}
+
+.skills-list {
+  list-style-type: none;
 }
 
 .profile-container-contact {

@@ -42,10 +42,6 @@ p {
   line-height: normal;
 }  
 
-.center {
-  text-align: center;
-}
-
 #table {
   margin: auto;
 }
@@ -148,7 +144,6 @@ a:active {
 
 .profile-container-about {
   background-color: var(--grid-color);
-  height: 800px;
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -157,6 +152,11 @@ a:active {
   border-bottom-right-radius: 20%;
   border-top-right-radius: 20%;
   border-bottom-left-radius: 20%;
+  text-align: center;
+}
+
+.skills-list {
+  list-style-type: none;
 }
 
 .profile-container-contact {
