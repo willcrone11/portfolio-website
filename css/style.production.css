@@ -123,9 +123,8 @@ transition-property: opacity;
 
 .profile-container {
   background-color: #a6bbe2;
-  height: 650px;
+  height: 700px;
   text-align: center;
-  min-width: 300px;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
@@ -134,13 +133,11 @@ transition-property: opacity;
 
 .profile-container-about {
   background-color: #a6bbe2;
-  margin-left: 10px;
-  margin-right: 10px;
-  min-width: 400px;
-  border-top-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  border-top-right-radius: 20%;
-  border-bottom-left-radius: 20%;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
   text-align: center;
 }
 
