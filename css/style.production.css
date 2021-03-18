@@ -124,14 +124,12 @@ transition-property: opacity;
 .profile-container {
   background-color: #a6bbe2;
   height: 650px;
-  margin-left: 50px;
-  margin-right: 50px;
   text-align: center;
   min-width: 300px;
-  border-top-right-radius: 20%;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  border-top-left-radius: 20%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 10%;
 }
 
 .profile-container-about {
