@@ -215,6 +215,56 @@ a:active {
   margin-left: 15px;
 }
 
+.site-image {
+  width: 80%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.portfolio-page-container {
+  background-color: #a6bbe2;
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+  border-top-left-radius: 2%;
+}
+
+.site-image-display-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-description-container {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-bottom: solid black 1px;
+  border-top: solid black 1px;
+}
+
+.site-background-container, .preview-container {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-bottom: solid black 1px;
+}
+
+.preview-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technologies {
+  color: #615d5d;
+  font-size: 14px;
+}
+
 /* start grid fallback */
 .grid__item {
   display: inline-block;
