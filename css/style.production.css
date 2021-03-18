@@ -145,7 +145,23 @@ transition-property: opacity;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
 }
+
+#work-header {
   text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-style: bold;
+  border-bottom: solid black 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#work-grid {
+  background-color: #a6bbe2;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 
 .skills-list {
