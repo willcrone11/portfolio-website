@@ -220,11 +220,8 @@ transition-property: opacity;
 }
 
 #logo {
-  border-top-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-  border-top-right-radius: 10%;
-  border-bottom-left-radius: 10%;
-  max-height: 60px;
+  max-height: 100px;
+  max-width: 120px;
 }
 
 .navigation-list {
