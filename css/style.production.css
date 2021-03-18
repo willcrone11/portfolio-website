@@ -108,6 +108,12 @@ transition-property: opacity;
   margin: 0 auto;
 }
 
+.header-container {
+  border-bottom: solid black 1px;
+  padding-top: 10px;
+  text-align: center;
+}
+
 .profile-container {
   background-color: #a6bbe2;
   height: 700px;
@@ -116,6 +122,20 @@ transition-property: opacity;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-left-radius: 10%;
+}
+
+#about-description-container, #about-skills-container {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: solid black 1px;
+}
+
+#about-work-together {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-style: bold;
 }
 
 .profile-container-about {
