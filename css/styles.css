@@ -66,6 +66,7 @@ a:active {
   background-color: var(--primary-color);
   color: var(--webpage-background);
   text-decoration: none;
+  text-transform: uppercase;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid var(--button-border);
@@ -77,6 +78,7 @@ a:active {
   background-color: var(--secondary-color);
   color: var(--button-text);
   text-decoration: none;
+  text-transform: uppercase;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid var(--button-border);
