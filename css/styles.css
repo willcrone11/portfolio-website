@@ -280,6 +280,13 @@ a:active {
   font-size: 14px;
 }
 
+.back-to-portfolio {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-style: bold;
+}
+
 /* start grid fallback */
 .grid__item {
   display: inline-block;
