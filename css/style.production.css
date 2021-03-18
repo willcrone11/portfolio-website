@@ -229,7 +229,6 @@ transition-property: opacity;
 }
 
 .navigation-list li {
-  display: inline-block;
   margin-left: 15px;
 }
 
