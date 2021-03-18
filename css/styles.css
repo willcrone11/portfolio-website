@@ -12,7 +12,7 @@ Secondary Color: #e0b354;
   --webpage-background: #4265ff;
   --visited-link: #f4fff9;
   --active-link: #fcf8f8;
-  --grid-color:  #a6bbe2;
+  --grid-color:  #faf9ce;
   --button-border: #0000004d;
   --button-text: #2b2b2b;
  }
@@ -290,6 +290,10 @@ a:active {
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
  }
+
+.grid__item a {
+  color: #000000;
+} 
  /* end grid fallback */
 
 @supports (display: grid) {

@@ -286,12 +286,16 @@ transition-property: opacity;
 .grid__item {
   display: inline-block;
   width: 33%;
-  background-color: #a6bbe2;
+  background-color: #faf9ce;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
- }
+}
+
+.grid__item a {
+  color: #000000;
+} 
  /* end grid fallback */
 
 @supports (display: grid) {
@@ -304,7 +308,7 @@ transition-property: opacity;
   }
 
   .grid__item {
-  background-color: #a6bbe2;
+  background-color: #faf9ce;
   width: auto;
   min-height: auto;
   margin: 10px;
@@ -313,6 +317,10 @@ transition-property: opacity;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  }
+
+  .grid__item a {
+    color: #000000;
   }
 }
 
