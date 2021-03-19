@@ -9,8 +9,10 @@ Secondary Color: #e0b354;
 :root {
   --primary-color: #5374c4;
   --secondary-color: #e0b354;
-  --webpage-background: #ffffff;
-  --grid-color:  #3856fd;
+  --webpage-background: #4265ff;
+  --visited-link: #f4fff9;
+  --active-link: #fcf8f8;
+  --grid-color:  #e2e8f5;
   --button-border: #0000004d;
   --button-text: #2b2b2b;
  }
@@ -18,7 +20,6 @@ Secondary Color: #e0b354;
 body  {
   background-color: var(--webpage-background);
   font-family: 'Montserrat', sans-serif;
-  color: var(--webpage-background);
 }
 
 h1 {
@@ -30,10 +31,9 @@ h2 {
 }
 
 a {
+  color: var(--active-link);
   font-size: 20px;
   line-height: normal;
-  position: relative;
-  z-index: 2;
 }
 
 p {
@@ -45,9 +45,18 @@ p {
   margin: auto;
 }
 
+a:visited {
+  /* visited link */
+  color: var(--visited-link);
+}
+
 a:hover, a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
+}
+  
+a:active {
+  color: var(--active-link);
 }
 
 .button {
@@ -62,8 +71,6 @@ a:hover, a:focus {
   border-bottom: 2px solid var(--button-border);
   transition-duration: 0.2s;
   transition-property: opacity;
-  position: relative;
-  z-index: 2;
 }
 
 .button__secondary {
@@ -76,8 +83,6 @@ a:hover, a:focus {
   border-bottom: 2px solid var(--button-border);
   transition-duration: 0.2s;
   transition-property: opacity;
-  position: relative;
-  z-index: 2;
 }
 
 .button__secondary:hover, .button__secondary:focus, .button:hover,
@@ -86,13 +91,8 @@ a:hover, a:focus {
   opacity: 0.8;
 }
 
-.navigation-list__item {
-  text-decoration: none;
-  color: #000000;
-}
-
 .navigation-list__item--active {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #profile__portrait {
@@ -110,16 +110,11 @@ a:hover, a:focus {
 
 .page-footer {
   clear: both;
-  color: #000000;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
-}
-
-.profile a {
-  color: #ffffff;
 }
 
 .header-container {
@@ -162,7 +157,6 @@ a:hover, a:focus {
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
   margin: 5px;
-  color: #000000;
 }
 
 #work-header {
@@ -176,7 +170,7 @@ a:hover, a:focus {
 }
 
 #work-grid {
-  background-color: var(--webpage-background);
+  background-color: #a6bbe2;
   text-align: center;
   border-top-left-radius: 5%;
   border-bottom-right-radius: 5%;
@@ -201,7 +195,7 @@ a:hover, a:focus {
 }
 
 .profile-container-contact {
-  background-color: var(--grid-color);
+  background-color: #a6bbe2;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
@@ -224,10 +218,6 @@ a:hover, a:focus {
   font-size: 40px;
   text-align: center;
   padding: 20px;
-}
-
-#contact-info a {
-  color: #ffffff;
 }
 
 #contact-preference-note {
@@ -281,7 +271,7 @@ a:hover, a:focus {
 }
 
 .portfolio-page-container {
-  background-color: var(--grid-color);
+  background-color: #a6bbe2;
 }
 
 .site-image-display-container {
@@ -316,7 +306,7 @@ a:hover, a:focus {
 }
 
 .technologies {
-  color: #f2f3ef;
+  color: #4f4a4a;
   font-size: 14px;
 }
 
@@ -336,6 +326,7 @@ a:hover, a:focus {
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  border: 1px solid black;
  }
 
  /* end grid fallback */
@@ -357,6 +348,7 @@ a:hover, a:focus {
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  border: 1px solid black;
   }
 }
 
@@ -403,11 +395,6 @@ a:hover, a:focus {
   animation-timing-function: linear;
 }
 
-#circle-container {
-  position: absolute;
-  z-index: 1;
-}
-
 .circles{
   position: -ms-page;
   top: 0;
@@ -419,7 +406,7 @@ a:hover, a:focus {
 
 .circles li{
   position: static;
-  display: block;
+  display: inline-block;
   list-style: none;
   width: 20px;
   height: 20px;
@@ -584,13 +571,13 @@ a:hover, a:focus {
 @keyframes animate {
 
   0%{
-      transform: translateY(-1000px) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
       opacity: 1;
       border-radius: 0;
   }
 
   100%{
-      transform: translateY(0) rotate(720deg);
+      transform: translateY(-1000px) rotate(720deg);
       opacity: 0;
       border-radius: 50%;
   }
