@@ -338,12 +338,12 @@ transition-property: opacity;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   }
 
   .grid__item {
-  background-color: #e2e8f5;
+  background-color: #fde5c5;
   width: auto;
   min-height: auto;
   margin: 10px;
