@@ -1,6 +1,7 @@
 body  {
-  background-color: #4265ff;;
+  background-color: white;
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 h1 {
@@ -12,13 +13,14 @@ h2 {
 }
 
 a {
-  color: #f4fff9;
   font-size: 20px;
   line-height: normal;
+  position: relative;
+  z-index: 2;
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: normal;
 }  
 
@@ -26,18 +28,9 @@ p {
   margin: auto;
 }
 
-a:visited {
-  /* visited link */
-  color: #f4fff9;
-}
-
 a:hover, a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
-}
-  
-a:active {
-  color: #fcf8f8;
 }
 
 .button {
@@ -56,6 +49,8 @@ a:active {
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
+  position: relative;
+  z-index: 2;
 }
 
 .button__secondary {
@@ -74,6 +69,8 @@ a:active {
 -webkit-transition-property: opacity;
 -o-transition-property: opacity;
 transition-property: opacity;
+position: relative;
+  z-index: 2;
 }
 
 .button__secondary:hover, .button__secondary:focus, .button:hover,
@@ -82,8 +79,13 @@ transition-property: opacity;
   opacity: 0.8;
 }
 
-.navigation-list__item--active {
+.navigation-list__item {
   text-decoration: none;
+  color: #000000;
+}
+
+.navigation-list__item--active {
+  text-decoration: underline;
 }
 
 #profile__portrait {
@@ -101,11 +103,16 @@ transition-property: opacity;
 
 .page-footer {
   clear: both;
+  color: #000000;
 }
 
 .profile {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.profile a {
+  color: #ffffff;
 }
 
 .header-container {
@@ -115,7 +122,7 @@ transition-property: opacity;
 }
 
 .profile-container {
-  background-color: #a6bbe2;
+  background-color: #3856fd;
   height: 700px;
   text-align: center;
   border-top-right-radius: 10%;
@@ -141,7 +148,7 @@ transition-property: opacity;
 }
 
 .profile-container-about {
-  background-color: #a6bbe2;
+  background-color: #3856fd;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
@@ -157,10 +164,11 @@ transition-property: opacity;
   border-bottom: solid black 1px;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: black;
 }
 
 #work-grid {
-  background-color: #a6bbe2;
+  background-color: #ffffff;
   text-align: center;
   border-top-left-radius: 5%;
   border-bottom-right-radius: 5%;
@@ -185,7 +193,7 @@ transition-property: opacity;
 }
 
 .profile-container-contact {
-  background-color: #a6bbe2;
+  background-color: #3856fd;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
@@ -208,6 +216,10 @@ transition-property: opacity;
   font-size: 40px;
   text-align: center;
   padding: 20px;
+}
+
+#contact-info a {
+  color: #ffffff;
 }
 
 #contact-preference-note {
@@ -273,7 +285,7 @@ transition-property: opacity;
 }
 
 .portfolio-page-container {
-  background-color: #a6bbe2;
+  background-color: #3856fd;
 }
 
 .site-image-display-container {
@@ -308,7 +320,7 @@ transition-property: opacity;
 }
 
 .technologies {
-  color: #4f4a4a;
+  color: #f2f3ef;
   font-size: 14px;
 }
 
@@ -323,12 +335,11 @@ transition-property: opacity;
 .grid__item {
   display: inline-block;
   width: 33%;
-  background-color: #e2e8f5;
+  background-color: #3856fd;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
-  border: 1px solid black;
 }
 
  /* end grid fallback */
@@ -343,7 +354,7 @@ transition-property: opacity;
   }
 
   .grid__item {
-  background-color: #fde5c5;
+  background-color: #3856fd;
   width: auto;
   min-height: auto;
   margin: 10px;
@@ -352,7 +363,6 @@ transition-property: opacity;
   border-bottom-right-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
-  border: 1px solid black;
   }
 }
 
@@ -418,6 +428,11 @@ transition-property: opacity;
           animation-timing-function: linear;
 }
 
+#circle-container {
+  position: absolute;
+  z-index: 1;
+}
+
 .circles{
   position: -ms-page;
   top: 0;
@@ -426,8 +441,9 @@ transition-property: opacity;
   height: 100%;
 }
 
-.circles li{
+.circles li {
   display: inline-block;
+  position: static;
   list-style: none;
   width: 20px;
   height: 20px;
@@ -591,13 +607,13 @@ transition-property: opacity;
 @keyframes animate {
 
   0%{
-      transform: translateY(0) rotate(0deg);
+      transform: translateY(-1000px) rotate(0deg);
       opacity: 1;
       border-radius: 0;
   }
 
   100%{
-      transform: translateY(-1000px) rotate(720deg);
+      transform: translateY(0) rotate(720deg);
       opacity: 0;
       border-radius: 50%;
   }
