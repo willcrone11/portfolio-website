@@ -62,8 +62,8 @@ a:active {
 .button {
   border: none;
   font-family: inherit;
-  background-color: var(--primary-color);
-  color: var(--webpage-background);
+  background-color: #f7f7fc;
+  color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
@@ -75,7 +75,7 @@ a:active {
 
 .button__secondary {
   background-color: var(--secondary-color);
-  color: var(--button-text);
+  color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
@@ -118,7 +118,7 @@ a:active {
 }
 
 .header-container {
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
   padding-top: 10px;
   text-align: center;
 }
@@ -139,7 +139,7 @@ a:active {
   text-align: left;
   margin-left: 50px;
   margin-right: 50px;
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
 }
 
 #about-work-together {
@@ -164,13 +164,14 @@ a:active {
   margin-left: 50px;
   margin-right: 50px;
   font-style: bold;
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: #ffffff;
 }
 
 #work-grid {
-  background-color: #a6bbe2;
+  background-color: #3856fd;
   text-align: center;
   border-top-left-radius: 5%;
   border-bottom-right-radius: 5%;
@@ -270,8 +271,29 @@ a:active {
   padding-top: 50px;
 }
 
+.portfolio-button {
+  border: none;
+  font-family: inherit;
+  background-color: #3856fd;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #0000004d;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  position: relative;
+  z-index: 2;
+}
+
 .portfolio-page-container {
-  background-color: #a6bbe2;
+  background-color: #ffffff;
+  color: black;
 }
 
 .site-image-display-container {
@@ -306,7 +328,7 @@ a:active {
 }
 
 .technologies {
-  color: #4f4a4a;
+  color: #000000;
   font-size: 14px;
 }
 
@@ -334,12 +356,13 @@ a:active {
 @supports (display: grid) {
  .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   }
 
   .grid__item {
-  background-color: var(--grid-color);
+  background-color: #ffffff;
+  color: #000000;
   width: auto;
   min-height: auto;
   margin: 10px;
