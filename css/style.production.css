@@ -140,6 +140,12 @@ position: relative;
   border-bottom: solid white 1px;
 }
 
+#about-portfolio {
+  font-style: bold;
+  border-top: solid white 1px;
+  text-align: center;
+}
+
 #about-work-together {
   text-align: center;
   margin-left: 50px;
