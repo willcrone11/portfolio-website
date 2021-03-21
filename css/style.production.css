@@ -208,7 +208,7 @@ position: relative;
 }
 
 #contact-header {
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
   padding: 20px;
   text-align: center;
   margin-left: 50px;
@@ -216,7 +216,7 @@ position: relative;
 }
 
 #contact-info {
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
   margin-left: 50px;
   margin-right: 50px;
   font-size: 40px;
@@ -308,6 +308,11 @@ position: relative;
   transition-property: opacity;
   position: relative;
   z-index: 2;
+}
+
+.portfolio-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .portfolio-page-container {
