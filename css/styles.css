@@ -232,9 +232,15 @@ a:active {
 
 .page-footer {
   clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  color: #000000;
+}
+
+.find-me-footer a {
+  text-decoration: none;
+}
+
+.find-me-footer a:hover {
+  opacity: .6;
 }
 
 .page-header {

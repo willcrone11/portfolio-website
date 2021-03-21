@@ -106,6 +106,14 @@ position: relative;
   color: #000000;
 }
 
+.find-me-footer a {
+  text-decoration: none;
+}
+
+.find-me-footer a:hover {
+  opacity: .6;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
