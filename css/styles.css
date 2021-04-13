@@ -139,14 +139,14 @@ a:active {
   text-align: left;
   margin-left: 50px;
   margin-right: 50px;
-  border-bottom: solid white 1px;
 }
 
-#about-work-together {
+.work-together {
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
   font-style: bold;
+  border-bottom: solid white 1px;
 }
 
 .profile-container-about {
@@ -186,9 +186,17 @@ a:active {
   border-top: solid black 1px;
 }
 
+.work-grid-image-mobile {
+  width: 200px;
+  height: 480px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
 .work-grid-text-container {
   text-align: left;
   border-top: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
 .skills-list {
@@ -273,6 +281,13 @@ a:active {
 
 .site-image {
   width: 80%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.site-image-mobile {
+  width: 30%;
+  height: 900px;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -367,7 +382,7 @@ a:active {
 @supports (display: grid) {
  .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
   }
 
@@ -376,7 +391,7 @@ a:active {
   color: #000000;
   width: auto;
   min-height: auto;
-  margin: 10px;
+  margin: 20px;
   padding: 30px;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
