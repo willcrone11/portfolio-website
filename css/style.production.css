@@ -308,7 +308,7 @@ position: relative;
 
 .site-image-mobile {
   width: 30%;
-  height: 900px;
+  height: 100%;
   padding-bottom: 50px;
   padding-top: 50px;
 }
