@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contact Willem Crone</title>
+    <title>Contact Willem Crone - Senior Software Engineer</title>
     <link rel="shortcut icon" href="img/willcronelogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,43 +11,175 @@
   </head>
   <body>
     <header class="page-header">
-      <img src="img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-      <nav class="page-header__item">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
-          </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__container">
+        <div class="page-header__item">
+          <a href="index.html">
+            <img src="img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="page-header__item">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" type="button">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
     </header>
-    <div class="profile-container-contact">
-      <div id="contact-header">
-        <h1>Contact</h1>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close mobile menu" type="button"></button>
+      <ul class="mobile-navigation-list">
+        <li>
+          <a href="index.html" class="mobile-navigation-item">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="mobile-navigation-item">About</a>
+        </li>
+        <li>
+          <a href="work.html" class="mobile-navigation-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="contact.html" class="mobile-navigation-item mobile-navigation-item--active">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contact-hero-section">
+      <div class="contact-hero-content">
+        <div class="contact-hero-text">
+          <h1>Let's <span class="connect-animation">Connect</span></h1>
+          <h2>Ready to discuss your next technical challenge?</h2>
+          <p class="contact-hero-subtitle">I'm always interested in hearing about new opportunities, technical challenges, and innovative projects. Whether you're looking for a senior engineer, technical consultant, or team leader, I'd love to connect.</p>
+          <div class="contact-hero-actions">
+            <a href="#contact-options" class="button__secondary">Get My Contact Info</a>
+          </div>
+        </div>
+        <div class="contact-hero-image">
+          <img src="img/connect.jpg" id="profile__portrait" alt="Willem Crone - Senior Software Engineer & Technical Leader">
+        </div>
       </div>
-      <div id="contact-info">
-        <p>
-          Willem Crone<br>
-          5040 Linbar Dr. Apt 113<br>
-          Nashville, TN 37211<br>
-          United States<br>
-          Tel: <a href="tel:5407977345">(540) 797-7345</a><br>
-          Email: <a href="mailto:will.crone11@gmail.com">will.crone11@gmail.com</a><br>
-        </p>
-      </div>
-      <p id="contact-preference-note">*Email is my preferred method of contact but I will also return texts or calls!</p>
     </div>
+
+    <div class="contact-main-container">
+      <!-- Contact Information Section -->
+      <section class="contact-section fade-in-section" id="contact-options">
+        <div class="contact-section-header">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-methods">
+          <div class="contact-method-card primary fade-in-stagger fade-in-delay-1">
+            <div class="contact-icon">📧</div>
+            <h3>Email</h3>
+            <p class="contact-detail">
+              <a href="mailto:will.crone11@gmail.com">will.crone11@gmail.com</a>
+            </p>
+            <p class="contact-note">Preferred method - I typically respond within 24 hours</p>
+          </div>
+
+          <div class="contact-method-card fade-in-stagger fade-in-delay-2">
+            <div class="contact-icon">📱</div>
+            <h3>Phone</h3>
+            <p class="contact-detail">
+              <a href="tel:5407977345">(540) 797-7345</a>
+            </p>
+            <p class="contact-note">Available for calls and texts</p>
+          </div>
+
+          <div class="contact-method-card fade-in-stagger fade-in-delay-3">
+            <div class="contact-icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p class="contact-detail">
+              <a href="https://www.linkedin.com/in/willem-crone/" target="_blank">linkedin.com/in/willem-crone</a>
+            </p>
+            <p class="contact-note">Professional networking and career discussions</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location & Availability Section -->
+      <section class="contact-section fade-in-section">
+        <div class="contact-section-header">
+          <h2>Location & Availability</h2>
+        </div>
+        <div class="location-availability">
+          <div class="location-card fade-in-stagger fade-in-delay-1">
+            <div class="location-icon">📍</div>
+            <h3>Based in Nashville, TN</h3>
+            <p>Currently located in Nashville, Tennessee. Open to remote opportunities, hybrid arrangements, and willing to discuss relocation for the right opportunity.</p>
+          </div>
+          <div class="availability-card fade-in-stagger fade-in-delay-2">
+            <div class="availability-icon">🚀</div>
+            <h3>Available for New Opportunities</h3>
+            <p>Actively seeking senior software engineer and technical leadership roles. Interested in enterprise consulting, team leadership, and challenging technical projects.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I'm Looking For Section -->
+      <section class="contact-section fade-in-section">
+        <div class="contact-section-header">
+          <h2>What I'm Looking For</h2>
+        </div>
+        <div class="looking-for-grid">
+          <div class="looking-for-card fade-in-stagger fade-in-delay-1">
+            <h3>🎯 Senior Engineering Roles</h3>
+            <p>Technical leadership positions where I can leverage my 4+ years of enterprise consulting and team mentorship experience.</p>
+          </div>
+          <div class="looking-for-card fade-in-stagger fade-in-delay-2">
+            <h3>🏥 Healthcare Technology</h3>
+            <p>Patient-focused solutions and enterprise healthcare applications where I can apply my deep domain expertise.</p>
+          </div>
+          <div class="looking-for-card fade-in-stagger fade-in-delay-3">
+            <h3>👥 Team Leadership</h3>
+            <p>Opportunities to lead development teams, mentor junior engineers, and drive technical decision-making.</p>
+          </div>
+          <div class="looking-for-card fade-in-stagger fade-in-delay-4">
+            <h3>🔧 Technical Modernization</h3>
+            <p>Complex legacy system overhauls and enterprise-scale architectural challenges.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume Download Section -->
+      <div class="resume-download-section fade-in-section">
+        <h3>Want to learn more about my experience?</h3>
+        <a href="img/WillemCrone-Resume.pdf" class="button resume-button" download>
+          📄 Download Resume
+        </a>
+        <a href="work.html" class="button__secondary">
+          👁️ View Portfolio
+        </a>
+      </div>
+    </div>
+
     <footer class="page-footer">
       <div class="find-me-footer">
-        <p>Find me on</p>
+        <p>Connect with me</p>
         <div class="social-media">
           <a href="https://github.com/willcrone11" target="_blank">
             <img src="img/github_icon.svg" alt="github">
@@ -61,5 +193,132 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Modern Navigation JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const body = document.body;
+        const header = document.querySelector('.page-header');
+        const navigationList = document.querySelector('.navigation-list');
+        const navItems = document.querySelectorAll('.navigation-list__item');
+
+        // Initialize sliding indicator
+        function initSlidingIndicator() {
+          const activeItem = document.querySelector('.navigation-list__item--active');
+          if (activeItem && navigationList) {
+            updateSlidingIndicator(activeItem);
+          }
+        }
+
+        // Update sliding indicator position
+        function updateSlidingIndicator(activeItem) {
+          const navigationRect = navigationList.getBoundingClientRect();
+          const activeRect = activeItem.getBoundingClientRect();
+          const left = activeRect.left - navigationRect.left;
+          const width = activeRect.width;
+          
+          navigationList.style.setProperty('--indicator-left', left + 'px');
+          navigationList.style.setProperty('--indicator-width', width + 'px');
+          
+          // Show the indicator
+          const indicator = navigationList.querySelector('::after') || navigationList;
+          navigationList.style.setProperty('--indicator-opacity', '1');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+
+        // Initialize sliding indicator on load
+        setTimeout(initSlidingIndicator, 100);
+
+        // Mobile menu functions
+        function openMobileMenu() {
+          mobileMenuToggle.classList.add('active');
+          mobileMenuOverlay.classList.add('active');
+          mobileMenu.classList.add('active');
+          body.classList.add('mobile-menu-open');
+        }
+
+        function closeMobileMenu() {
+          mobileMenuToggle.classList.remove('active');
+          mobileMenuOverlay.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('mobile-menu-open');
+        }
+
+        // Event listeners
+        mobileMenuToggle.addEventListener('click', function() {
+          if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking nav items
+        const mobileNavItems = document.querySelectorAll('.mobile-navigation-item');
+        mobileNavItems.forEach(item => {
+          item.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Close menu on window resize (desktop)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Scroll Fade-In Animation
+        function initScrollFadeIn() {
+          const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
+          
+          // Don't animate if user prefers reduced motion
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            fadeElements.forEach(element => {
+              element.classList.add('fade-in-visible');
+            });
+            return;
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+              }
+            });
+          }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          });
+
+          fadeElements.forEach(element => {
+            observer.observe(element);
+          });
+        }
+
+        // Initialize fade-in animations
+        initScrollFadeIn();
+      });
+    </script>
   </body>
-</html>    
+</html>

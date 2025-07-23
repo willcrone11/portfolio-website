@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>About Willem Crone</title>
+    <title>About Willem Crone - Senior Software Engineer</title>
     <link rel="shortcut icon" href="img/willcronelogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,78 +11,346 @@
   </head>
   <body>
     <header class="page-header">
-      <img src="img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-      <nav class="page-header__item">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">About</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
-          </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__container">
+        <div class="page-header__item">
+          <a href="index.html">
+            <img src="img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="page-header__item">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">About</a>
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" type="button">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
     </header>
-    <div class="profile-container-about">
-      <div id="about-description-container">
-        <div class="header-container">
-          <h1>About Me</h1>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close mobile menu" type="button"></button>
+      <ul class="mobile-navigation-list">
+        <li>
+          <a href="index.html" class="mobile-navigation-item">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="mobile-navigation-item mobile-navigation-item--active">About</a>
+        </li>
+        <li>
+          <a href="work.html" class="mobile-navigation-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="contact.html" class="mobile-navigation-item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="about-hero-section">
+      <div class="about-hero-content">
+        <div class="about-hero-text">
+          <h1>Senior Software Engineer & Technical Leader</h1>
+          <h2>Enterprise Consultant | Team Mentor | Full-Stack Developer</h2>
+          <p class="about-hero-subtitle">4+ years leading agile teams and providing daily technical consultation to enterprise healthcare clients. Expert in mentoring development teams, modernizing legacy systems, and delivering complex projects serving 100K-1M monthly users each.</p>
         </div>
-        <p id="about-me-text">I'm a full-stack web developer based in Nashville, TN. Currently, I work as an Software Engineer at <a href="https://modea.com" target="_blank" class="modea-link">Modea</a>. I have a broad knowledge of both back-end and front-end technologies and frameworks.<br><br/>
-          I have a background in classical music, having taken music lessons since the age of 3. In 2020, I graduated with a B.M. in French Horn performance from the Cleveland Institute of Music, one of the top conservatories in the country.
-          My classical music background taught me the value of patience and hard work and helped me to develop my creative sensibilities.<br><br>
-          I got my start as a developer working with JavaScript within the React framework. In my current role at Modea, I spend the majority of my time building large, patient-facing enterprise web projects for hospitals and healthcare systems; these are built primarily with either Drupal or Wordpress.<br></br> 
-          I am well-versed in Agile development and have a bevy of experience working in a team setting. In addition, as Modea is a consultancy, I am used to working with clients and stakeholders on a daily basis to ensure we are adapting to challenges and developing great products.<br></br>
-          In my free time I enjoy rock climbing, playing the Horn and going on adventures with my dog Momo!</p><br>
-        <svg class="cleveland" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_2" x="0px" y="0px" viewBox="0 321 1581.7 382.1" enable-background="new 0 321 1581.7 382.1" xml:space="preserve">
-          <path stroke="" stroke-width="2" stroke-miterlimit="10" d="M1546.7,649.8v-18.3h-64.4v-98.4h0.1l8.2-5h-97.5  l6.9,5h1.2v98.4h-9.5v-42h-14.6v-4.8h-2.1v-4.1h-39.5v-2.9h-11.7v-6h-6.8v6h-4.8v4.5h-15.9v7.3h-29.2v6.4h-1.9v20.9h-4.5v-18h-12.3  v-9.3h-3.2v-25h-5.4v-9.1h-2.8v-6.8h-4.8l2.3-3.8h-13.4v-20.4h-0.8v20.4h-5.4l2.3,3.8h-8.1V515h-1.9v-16.7h-1.5v-8.1h0.4l-2-5.6  l-2,5.6h-0.9v-8h2.3v-2.6h-2.3V472h2.3v-2.3h-2.3v-4.2h-1.1v-5.2h-2.5v-19.2h-1.9v-5.8h-1.2l-4-15.4v-25.2h-0.7v24.1l-3.6,16.7h-1.1  v5.8h-1.7v19.5h-2.9v5.2h-0.8v4.2h-2v2.3h2v7.6h-2v2.5h2v7.9l-2-5.6l-2,5.6v8.1h-1.6v16.7h-3.2v83.5h-36.4v1.6l-8.5,3v2.8h-20.7v7.7  h-4.1v-3.2h-17.1v6h-8.9v-3.6v-6.8h-9.1v6.8h-4.2v7.3h-15.9v-3.6h-5v-6h-4.5v-62.1h-20v-5.4h-15v-70.4h-4.1v-9.5h-4.4v-9.5h-4.1V443  H924v10.9h-3.6v9.5h-4.1v9.5h-4.5V536h-32.3v7.3h-20.9V452h-4.8v-38h-1.2v-10.9h-3.2v-6.4H846v-6.1h-1.6v-6h-4.1v-5.2h-1.6v-3.2H835  v-5.4h-3v-4h-1.5v-4h-2.5v-4.4h-1.9v-4.2h-0.7l-3.7-5.8v-20.3h-0.1v20.4l-3.4,5.7h-0.8v4.2h-2v4.4h-1.9v4.1h-2.3v4h-3.4v5.4H804v3.2  h-1.3v5.2h-4.1v6h-1.3v6.1h-3.7v6.4h-3v10.9h-1.1v38h-5.3v113l-6.6,5.6H769l-1.7-3.7h-7l-4.8,0.7l-2.1,3h-2.1l-2.1-3.7  c0,0-0.5,2.1-0.8,3.7H725v11.8h-25.4v-65.3h-33.1v-2.4h-4.8v2.4h-3.4v-2.4h-4.8v2.4h-2.6v-2.4h-2.9v-10.1h1.7v-3.4h-4.8v3.4h1.9v9.8  h-0.4v2.4h-2.8v-2.4h-4.8v2.4h-27.2v65.3h-23.2v24.5H582v-5.4h-6.4v-19.1h-12.7v-11.8h-12.3V522h-82.5v65.9h-12.5v-5H410v5h-12.2  V527h-13v-6.2h-15.2v-2h-2.8v2h-10.7v-2h-0.9v2h-10.9v-22.5H323v-3.2h-2.8v3.2h-6v-3.2h3.2v-3.8H294v3.8h2.9v3.2h-6.2v-3.2h-2v3.2  h-2v-3.2h-2.1v3.2h-2.8v-3.2H279v3.2h-11.4v137.3H146.8v-27.4h-3.6V599h-5.4v-9.4h-5v-8.6H80.9v8.6H65.5v9.5h-9.9v9.1h-9.9v28.9H6.3  v13H1v53h1580.7v-53L1546.7,649.8L1546.7,649.8z"/>
-        </svg>
-        <br><br/>
-      </div>
-      <div id="about-skills-container">
-        <h2>My skills include:</h2>
-        <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS and SCSS</li>
-          <li>JavaScript</li>
-          <li>JQuery</li>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>React.js</li>
-          <li>React Native</li>
-          <li>Wordpress</li>
-          <li>Drupal</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Git</li>
-          <li>Github/Azure/Bitbucket</li>
-          <li>Pantheon</li>
-          <li>Acquia</li>
-          <li>Google Firebase</li>
-        </ul>
-        <br>
-        <br>
-        <div id="about-portfolio">
-          <h3>Check out my Portfolio-</h3><br>
-          <a href="work.html" class="button__secondary">View my Portfolio</a>
+        <div class="about-hero-image">
+          <img src="img/about-photo-1.jpg" id="profile__portrait" alt="Willem Crone - Senior Software Engineer & Technical Leader">
         </div>
-        <br><br>
-      </div>
-      
-      <div class="work-together">
-        <p>Interested in Working Together?</p><br>
-        <a href="contact.html" class="button">Contact Me</a><br><br><br><br/>
       </div>
     </div>
+
+    <div class="about-main-container">
+      <!-- Professional Overview Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Professional Overview</h2>
+        </div>
+        <div class="about-two-column">
+          <div class="about-column fade-in-stagger fade-in-delay-1">
+            <p>I'm a <strong>Senior Software Engineer & Technical Leader</strong> with 4+ years of specialized experience in enterprise consulting and team leadership. Currently serving as a <strong>Software Engineer at Modea</strong>, I've led technical teams and provided daily consultation to major healthcare systems while developing 7 enterprise applications serving an average of 700,000 monthly users each.</p>
+            
+            <p><strong>As a technical consultant and mentor</strong>, I've worked in agile environments with clients including the Keck School of Medicine at USC, Vanderbilt Health, Siteman Cancer Center, Luminis Health, and more, providing daily technical guidance, leading development decisions, and training internal teams. At Modea, I serve as the WordPress expert for all new hires and existing developers, having built comprehensive internal training protocols and mentored multiple developers through 3-month learning programs. My consulting approach combines deep technical expertise with clear communication, ensuring clients understand both the "how" and "why" behind technical decisions.</p>
+            
+            <p class="unique-background">My unique background in classical music (B.M. from Cleveland Institute of Music) has enhanced my leadership style, bringing exceptional attention to detail, collaborative teamwork skills, and the discipline required for mentoring teams through complex technical challenges.</p>
+          </div>
+          <div class="about-column fade-in-stagger fade-in-delay-2">
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">4+ Years</div>
+                <div class="stat-label">Daily Client Consultation & Agile Leadership</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Enterprise Healthcare Applications Developed and Maintained</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">700K</div>
+                <div class="stat-label">Avg Monthly Users Per Application</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">3 Months</div>
+                <div class="stat-label">Internal WordPress Training Timeline (Modea)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Specializations Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Technical Specializations</h2>
+        </div>
+        <div class="expertise-grid">
+          <div class="expertise-card fade-in-stagger fade-in-delay-1">
+            <div class="expertise-icon">🏥</div>
+            <h3>Enterprise Healthcare Applications</h3>
+            <p>Deep specialization in patient-facing enterprise applications for USC Keck Medicine, Vanderbilt Health ecosystem, Siteman Cancer Center, Luminis Health, and Chesapeake Regional—serving 100K-1M monthly users each.</p>
+          </div>
+          <div class="expertise-card fade-in-stagger fade-in-delay-2">
+            <div class="expertise-icon">🔧</div>
+            <h3>Scalable Architecture & Component Libraries</h3>
+            <p>Architect reusable component systems for enterprise scale, including Vanderbilt's 20+ components designed for 500+ sites. Expert in atomic design approaches that maximize flexibility and long-term maintainability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Skills Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Technical Skills & Technologies</h2>
+        </div>
+        <div class="skills-categories">
+          <div class="skill-category fade-in-stagger fade-in-delay-1">
+            <h3>Languages & Core Technologies</h3>
+            <div class="skills-list">
+              <span class="skill-tag advanced">JavaScript</span>
+              <span class="skill-tag advanced">TypeScript</span>
+              <span class="skill-tag advanced">PHP</span>
+              <span class="skill-tag advanced">HTML/CSS</span>
+              <span class="skill-tag advanced">SCSS</span>
+              <span class="skill-tag intermediate">Python</span>
+            </div>
+          </div>
+          
+          <div class="skill-category fade-in-stagger fade-in-delay-2">
+            <h3>Frontend Frameworks & Libraries</h3>
+            <div class="skills-list">
+              <span class="skill-tag advanced">React</span>
+              <span class="skill-tag advanced">Next.js</span>
+              <span class="skill-tag advanced">React Native</span>
+              <span class="skill-tag advanced">Ionic</span>
+              <span class="skill-tag advanced">Angular</span>
+              <span class="skill-tag advanced">jQuery</span>
+              <span class="skill-tag intermediate">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in-stagger fade-in-delay-3">
+            <h3>Backend & CMS Platforms</h3>
+            <div class="skills-list">
+              <span class="skill-tag expert">WordPress</span>
+              <span class="skill-tag expert">Drupal (Headless & Vanilla)</span>
+              <span class="skill-tag advanced">Gutenberg</span>
+              <span class="skill-tag advanced">ACF</span>
+              <span class="skill-tag advanced">Twig</span>
+              <span class="skill-tag intermediate">Node.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in-stagger fade-in-delay-4">
+            <h3>Cloud & DevOps</h3>
+            <div class="skills-list">
+              <span class="skill-tag advanced">AWS (Amplify, S3, CloudFront)</span>
+              <span class="skill-tag advanced">Pantheon</span>
+              <span class="skill-tag advanced">Acquia</span>
+              <span class="skill-tag intermediate">Azure</span>
+              <span class="skill-tag advanced">Bitbucket Pipelines</span>
+              <span class="skill-tag advanced">GitHub Actions</span>
+              <span class="skill-tag advanced">Jenkins</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in-stagger fade-in-delay-5">
+            <h3>APIs & Integrations</h3>
+            <div class="skills-list">
+              <span class="skill-tag advanced">Google Maps/Places API</span>
+              <span class="skill-tag advanced">Epic/MyChart</span>
+              <span class="skill-tag advanced">Press Ganey API</span>
+              <span class="skill-tag advanced">Yext</span>
+              <span class="skill-tag advanced">Staywell/PFD API</span>
+              <span class="skill-tag intermediate">Relevanssi</span>
+            </div>
+          </div>
+
+          <div class="skill-category fade-in-stagger fade-in-delay-6">
+            <h3>Development Tools & Platforms</h3>
+            <div class="skills-list">
+              <span class="skill-tag advanced">Git/GitHub/Bitbucket</span>
+              <span class="skill-tag advanced">Jira/Confluence</span>
+              <span class="skill-tag advanced">XCode/Android Studio</span>
+              <span class="skill-tag expert">Cursor</span>
+              <span class="skill-tag advanced">Claude/GitHub Copilot</span>
+              <span class="skill-tag intermediate">Snyk</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Expertise Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Leadership & Consulting Expertise</h2>
+        </div>
+        <div class="expertise-grid">
+          <div class="expertise-card fade-in-stagger fade-in-delay-1">
+            <div class="expertise-icon">👨‍💼</div>
+            <h3>Enterprise Technical Consulting</h3>
+            <p>4+ years providing daily technical consultation to major healthcare enterprises. Expert at translating complex technical decisions into business value, guiding architecture choices, and ensuring alignment between technical solutions and organizational goals.</p>
+          </div>
+          <div class="expertise-card fade-in-stagger fade-in-delay-2">
+            <div class="expertise-icon">🎯</div>
+            <h3>Agile Team Leadership</h3>
+            <p>Led development teams across 7 enterprise projects, mentoring developers through complex technical challenges. Proven track record of delivering projects ahead of schedule while maintaining high code quality and team morale.</p>
+          </div>
+          <div class="expertise-card fade-in-stagger fade-in-delay-3">
+            <div class="expertise-icon">🎓</div>
+            <h3>Technical Training & Mentorship</h3>
+            <p>Designed and delivered comprehensive training programs both internally and for clients. At Modea, became the go-to WordPress expert for all new hires and existing developers—creating internal documentation, hands-on exercises, and 3-month training protocols. Led 6-month weekly WordPress training for Keck Medicine's internal team. Expert at upskilling teams and establishing technical expertise within organizations.</p>
+          </div>
+          <div class="expertise-card fade-in-stagger fade-in-delay-4">
+            <div class="expertise-icon">🏗️</div>
+            <h3>Legacy System Modernization Strategy</h3>
+            <p>Specialized consultant for modernizing complex legacy systems. Successfully guided clients through major technical migrations, including Vanderbilt's 6-year-old system overhaul and establishing modern CI/CD practices across multiple organizations.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Achievements Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Leadership & Consulting Achievements</h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card fade-in-stagger fade-in-delay-1">
+            <h3>Team Leadership & Mentorship</h3>
+            <ul>
+              <li><strong>Keck Medicine USC:</strong> Led 3-person development team through complex 23-site consolidation, providing daily technical guidance and architectural decisions</li>
+              <li><strong>Modea WordPress Expert:</strong> Became company's go-to WordPress specialist for all new and existing developers. Created comprehensive internal training program with documentation, hands-on exercises, and 3-month learning timeline</li>
+              <li><strong>Client Training Program:</strong> Designed and delivered 6-month weekly WordPress training program, establishing internal development expertise within client organization</li>
+              <li><strong>Cross-functional Leadership:</strong> Successfully coordinated between technical teams, stakeholders, and executive leadership across multiple enterprise organizations</li>
+            </ul>
+          </div>
+          
+          <div class="achievement-card fade-in-stagger fade-in-delay-2">
+            <h3>Enterprise Consulting Success</h3>
+            <ul>
+              <li><strong>Vanderbilt Health Ecosystem:</strong> Guided technical decision-making for complex 6-year-old system modernization, leading to 50% infrastructure complexity reduction</li>
+              <li><strong>Component Strategy Consulting:</strong> Architected scalable component library approach for Vanderbilt's 500+ site ecosystem, enabling organization-wide efficiency gains</li>
+              <li><strong>Agile Process Implementation:</strong> Established modern CI/CD practices across multiple client organizations, reducing development friction and improving deployment confidence</li>
+            </ul>
+          </div>
+
+          <div class="achievement-card fade-in-stagger fade-in-delay-3">
+            <h3>Technical Delivery Excellence</h3>
+            <ul>
+              <li><strong>Project Leadership:</strong> Consistently delivered enterprise projects ahead of schedule (Vanderbilt Specialty Pharmacy: 2 months early on 6-month timeline)</li>
+              <li><strong>Performance Consulting:</strong> Led technical optimizations resulting in measurable business impact, including SEO victories over LA-area healthcare competition</li>
+              <li><strong>Security & Modernization:</strong> Guided clients through critical security overhauls (1,100→250 vulnerabilities) and infrastructure migrations to modern platforms</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership Goals & Senior Role Focus Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Leadership Goals & Senior Role Focus</h2>
+        </div>
+        <div class="current-focus">
+          <p>I'm seeking senior software engineer and technical leadership opportunities where I can leverage my extensive enterprise consulting experience and proven team mentorship capabilities. My focus areas for senior roles include:</p>
+          <ul class="focus-list">
+            <li>Leading technical teams and providing strategic architectural guidance</li>
+            <li>Mentoring junior and mid-level developers through complex enterprise challenges</li>
+            <li>Serving as primary technical consultant for enterprise client relationships</li>
+            <li>Driving technical modernization initiatives across legacy systems</li>
+            <li>Establishing best practices and training programs within organizations</li>
+            <li>Building scalable technical solutions for healthcare and enterprise sectors</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Consulting Philosophy Section -->
+      <section class="about-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Consulting Philosophy & Approach</h2>
+        </div>
+        <div class="consulting-philosophy">
+          <div class="philosophy-grid">
+            <div class="philosophy-card fade-in-stagger fade-in-delay-1">
+              <h3>🤝 Partnership-Driven</h3>
+              <p>I work <em>with</em> clients, not just <em>for</em> them. Daily collaboration and transparent communication ensure technical decisions align with business objectives and organizational culture.</p>
+            </div>
+            <div class="philosophy-card fade-in-stagger fade-in-delay-2">
+              <h3>🎯 Education-First</h3>
+              <p>Every technical decision becomes a learning opportunity. I invest heavily in training client teams, ensuring they understand both implementation details and strategic reasoning behind technical choices.</p>
+            </div>
+            <div class="philosophy-card fade-in-stagger fade-in-delay-3">
+              <h3>🔄 Agile & Adaptive</h3>
+              <p>4+ years of daily agile collaboration has taught me to balance technical excellence with business agility. I help teams embrace change while maintaining code quality and architectural integrity.</p>
+            </div>
+            <div class="philosophy-card fade-in-stagger fade-in-delay-4">
+              <h3>📈 Long-term Thinking</h3>
+              <p>Every solution considers scalability, maintainability, and team growth. I design systems and processes that continue delivering value long after project completion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Touch Section -->
+      <section class="about-section personal-section fade-in-section">
+        <div class="about-section-header">
+          <h2>Beyond the Code</h2>
+        </div>
+        <div class="personal-content">
+          <p>When I'm not architecting enterprise solutions, you'll find me rock climbing, playing French horn, or exploring Nashville with my dog Momo. My classical music background from the Cleveland Institute of Music continues to influence my approach to software development—bringing the same precision, creativity, and dedication to excellence that defined my musical training.</p>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <div class="work-together fade-in-section">
+        <p>Ready to discuss your next senior engineering challenge?</p>
+        <a href="contact.html" class="button">Get In Touch</a>
+        <a href="work.html" class="button__secondary">View Portfolio</a>
+      </div>
+    </div>
+
     <footer class="page-footer">
       <div class="find-me-footer">
-        <p>Find me on</p>
+        <p>Connect with me</p>
         <div class="social-media">
           <a href="https://github.com/willcrone11" target="_blank">
             <img src="img/github_icon.svg" alt="github">
@@ -96,5 +364,132 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Modern Navigation JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const body = document.body;
+        const header = document.querySelector('.page-header');
+        const navigationList = document.querySelector('.navigation-list');
+        const navItems = document.querySelectorAll('.navigation-list__item');
+
+        // Initialize sliding indicator
+        function initSlidingIndicator() {
+          const activeItem = document.querySelector('.navigation-list__item--active');
+          if (activeItem && navigationList) {
+            updateSlidingIndicator(activeItem);
+          }
+        }
+
+        // Update sliding indicator position
+        function updateSlidingIndicator(activeItem) {
+          const navigationRect = navigationList.getBoundingClientRect();
+          const activeRect = activeItem.getBoundingClientRect();
+          const left = activeRect.left - navigationRect.left;
+          const width = activeRect.width;
+          
+          navigationList.style.setProperty('--indicator-left', left + 'px');
+          navigationList.style.setProperty('--indicator-width', width + 'px');
+          
+          // Show the indicator
+          const indicator = navigationList.querySelector('::after') || navigationList;
+          navigationList.style.setProperty('--indicator-opacity', '1');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+
+        // Initialize sliding indicator on load
+        setTimeout(initSlidingIndicator, 100);
+
+        // Mobile menu functions
+        function openMobileMenu() {
+          mobileMenuToggle.classList.add('active');
+          mobileMenuOverlay.classList.add('active');
+          mobileMenu.classList.add('active');
+          body.classList.add('mobile-menu-open');
+        }
+
+        function closeMobileMenu() {
+          mobileMenuToggle.classList.remove('active');
+          mobileMenuOverlay.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('mobile-menu-open');
+        }
+
+        // Event listeners
+        mobileMenuToggle.addEventListener('click', function() {
+          if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking nav items
+        const mobileNavItems = document.querySelectorAll('.mobile-navigation-item');
+        mobileNavItems.forEach(item => {
+          item.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Close menu on window resize (desktop)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Scroll Fade-In Animation
+        function initScrollFadeIn() {
+          const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
+          
+          // Don't animate if user prefers reduced motion
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            fadeElements.forEach(element => {
+              element.classList.add('fade-in-visible');
+            });
+            return;
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+              }
+            });
+          }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          });
+
+          fadeElements.forEach(element => {
+            observer.observe(element);
+          });
+        }
+
+        // Initialize fade-in animations
+        initScrollFadeIn();
+      });
+    </script>
   </body>
 </html>

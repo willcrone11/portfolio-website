@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Willem Crone Portfolio Website</title>
+    <title>Willem Crone - Senior Software Engineer & Technical Leader</title>
     <link rel="shortcut icon" href="img/willcronelogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,78 +11,399 @@
   </head>
   <body>
     <header class="page-header">
-      <img src="img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-      <nav class="page-header__item">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
-          </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__container">
+        <div class="page-header__item">
+          <a href="index.html">
+            <img src="img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="page-header__item">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" type="button">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
     </header>
-    <div class="profile-container">
-      <div class="profile">
-        <img src="img/willcroneportrait.jpeg" id="profile__portrait" alt="picture">
-        <h1>Hey, I'm Willem Crone</h1>
-        <p>and I'm a full-stack web developer based in Nashville, TN.</p>
-        <a href="https://github.com/willcrone11" target="_blank" >Check out some of my code</a><br><br>
-      </div>
-      <div>
-        <br>
-        <a href="img/WillemCrone-Resume.pdf" class="button" download>Download my Resume</a><br>
-        <br><br>
-        <a href="work.html" class="button__secondary">View my Portfolio</a>
-      </div>
-      <div id="circle-container">
-        <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>
-      </div>
-    </div>
-      <footer class="page-footer">
-        <div class="find-me-footer">
-          <p>Find me on</p>
-          <div class="social-media">
-            <a href="https://github.com/willcrone11" target="_blank">
-              <img src="img/github_icon.svg" alt="github">
-            </a>
-            <a href="https://www.instagram.com/will_crone/?hl=en/" target="_blank">
-              <img src="img/instagram_icon.svg" alt="instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/willem-crone/" target="_blank"> 
-              <img src="img/linkedin_icon.svg" alt="linkedin">
-            </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close mobile menu" type="button"></button>
+      <ul class="mobile-navigation-list">
+        <li>
+          <a href="index.html" class="mobile-navigation-item mobile-navigation-item--active">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="mobile-navigation-item">About</a>
+        </li>
+        <li>
+          <a href="work.html" class="mobile-navigation-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="contact.html" class="mobile-navigation-item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="home-hero-section">
+      <div class="home-hero-content">
+        <div class="home-hero-text">
+          <h1>Willem Crone</h1>
+          <h2>Senior Software Engineer & Technical Leader</h2>
+          <p class="home-hero-subtitle">4+ years leading enterprise healthcare development teams and providing daily technical consultation to major health systems. Specializing in modernizing legacy systems, mentoring developers, and delivering complex applications serving 100K-1M monthly users each.</p>
+          <div class="home-hero-actions">
+            <a href="work.html" class="button">View Portfolio</a>
+            <a href="contact.html" class="button__secondary">Get In Touch</a>
           </div>
         </div>
-      </footer>
-    <!-- <script src="js/tota11y.min.js"></script> -->
+        <div class="home-hero-image">
+          <div class="hero-image-container">
+            <img src="img/willcronelogo.png" id="hero-logo" alt="Willem Crone Logo">
+            <img src="img/headshot-2025.jpg" id="home-profile-portrait" alt="Willem Crone - Senior Software Engineer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-main-container">
+      <!-- Key Highlights Section -->
+      <section class="home-section fade-in-section">
+        <div class="home-section-header">
+          <h2>Enterprise Leadership & Expertise</h2>
+        </div>
+        <div class="home-highlights-grid">
+          <div class="home-highlight-card fade-in-stagger fade-in-delay-1">
+            <div class="highlight-icon">🏥</div>
+            <h3>Healthcare Enterprise Specialist</h3>
+            <p>Led development for USC Keck Medicine, Vanderbilt Health, Siteman Cancer Center, and other major health systems</p>
+          </div>
+          <div class="home-highlight-card fade-in-stagger fade-in-delay-2">
+            <div class="highlight-icon">👥</div>
+            <h3>Technical Mentor & Consultant</h3>
+            <p>Company WordPress expert at Modea, training new hires and providing daily client consultation for 4+ years</p>
+          </div>
+          <div class="home-highlight-card fade-in-stagger fade-in-delay-3">
+            <div class="highlight-icon">⚡</div>
+            <h3>Legacy Modernization Expert</h3>
+            <p>Specialized in overhauling complex 6-year-old systems, reducing vulnerabilities from 1,100→250 and improving performance</p>
+          </div>
+          <div class="home-highlight-card fade-in-stagger fade-in-delay-4">
+            <div class="highlight-icon">📈</div>
+            <h3>Proven Impact at Scale</h3>
+            <p>Built applications serving 700K+ monthly users on average, consistently delivering projects ahead of schedule</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Expertise Section -->
+      <section class="home-section fade-in-section">
+        <div class="home-section-header">
+          <h2>Technology Stack & Specializations</h2>
+        </div>
+        <div class="home-tech-showcase">
+          <div class="tech-category fade-in-stagger fade-in-delay-1">
+            <h3>Enterprise Platforms</h3>
+            <div class="tech-tags">
+              <span class="tech-tag expert">WordPress</span>
+              <span class="tech-tag expert">Drupal</span>
+              <span class="tech-tag advanced">React</span>
+              <span class="tech-tag advanced">Next.js</span>
+            </div>
+          </div>
+          <div class="tech-category fade-in-stagger fade-in-delay-2">
+            <h3>Cloud & DevOps</h3>
+            <div class="tech-tags">
+              <span class="tech-tag advanced">AWS</span>
+              <span class="tech-tag advanced">Pantheon</span>
+              <span class="tech-tag advanced">GitHub Actions</span>
+              <span class="tech-tag advanced">Bitbucket Pipelines</span>
+            </div>
+          </div>
+          <div class="tech-category fade-in-stagger fade-in-delay-3">
+            <h3>Healthcare Integrations</h3>
+            <div class="tech-tags">
+              <span class="tech-tag advanced">Epic/MyChart</span>
+              <span class="tech-tag advanced">Press Ganey API</span>
+              <span class="tech-tag advanced">Yext</span>
+              <span class="tech-tag advanced">Google Maps/Places</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Stats Section -->
+      <section class="home-section fade-in-section">
+        <div class="home-stats-container">
+          <div class="home-stat-item fade-in-stagger fade-in-delay-1">
+            <div class="home-stat-number">7</div>
+            <div class="home-stat-label">Enterprise Healthcare Applications</div>
+          </div>
+          <div class="home-stat-item fade-in-stagger fade-in-delay-2">
+            <div class="home-stat-number">4+</div>
+            <div class="home-stat-label">Years Daily Client Consultation</div>
+          </div>
+          <div class="home-stat-item fade-in-stagger fade-in-delay-3">
+            <div class="home-stat-number">700K</div>
+            <div class="home-stat-label">Avg Monthly Users Per App</div>
+          </div>
+          <div class="home-stat-item fade-in-stagger fade-in-delay-4">
+            <div class="home-stat-number">3</div>
+            <div class="home-stat-label">Month Internal Training Program</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Focus Section -->
+      <section class="home-section fade-in-section">
+        <div class="home-section-header">
+          <h2>Available for Senior Engineering Roles</h2>
+        </div>
+        <div class="home-current-focus">
+          <p>I'm actively seeking senior software engineer and technical leadership opportunities where I can leverage my enterprise consulting experience, team mentorship capabilities, and proven track record of modernizing complex healthcare systems.</p>
+          <div class="home-focus-areas">
+            <div class="focus-area fade-in-stagger fade-in-delay-1">🎯 Technical Leadership</div>
+            <div class="focus-area fade-in-stagger fade-in-delay-2">🏥 Healthcare Enterprise</div>
+            <div class="focus-area fade-in-stagger fade-in-delay-3">👨‍💼 Agile Consulting</div>
+            <div class="focus-area fade-in-stagger fade-in-delay-4">🎓 Team Mentorship</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <div class="home-cta-section fade-in-section">
+        <h3>Ready to discuss your next technical challenge?</h3>
+        <p>Let's connect about enterprise consulting, team leadership, or complex modernization projects.</p>
+        <div class="home-cta-actions">
+          <a href="contact.html" class="button">Let's Connect</a>
+          <a href="img/WillemCrone-Resume.pdf" class="button resume-download" download>📄 Download Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="find-me-footer">
+        <p>Connect with me</p>
+        <div class="social-media">
+          <a href="https://github.com/willcrone11" target="_blank">
+            <img src="img/github_icon.svg" alt="github">
+          </a>
+          <a href="https://www.instagram.com/will_crone/?hl=en/" target="_blank">
+            <img src="img/instagram_icon.svg" alt="instagram">
+          </a>
+          <a href="https://www.linkedin.com/in/willem-crone/" target="_blank"> 
+            <img src="img/linkedin_icon.svg" alt="linkedin">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Modern Navigation JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const body = document.body;
+        const header = document.querySelector('.page-header');
+        const navigationList = document.querySelector('.navigation-list');
+        const navItems = document.querySelectorAll('.navigation-list__item');
+
+        // Initialize sliding indicator
+        function initSlidingIndicator() {
+          const activeItem = document.querySelector('.navigation-list__item--active');
+          if (activeItem && navigationList) {
+            updateSlidingIndicator(activeItem);
+          }
+        }
+
+        // Update sliding indicator position
+        function updateSlidingIndicator(activeItem) {
+          const navigationRect = navigationList.getBoundingClientRect();
+          const activeRect = activeItem.getBoundingClientRect();
+          const left = activeRect.left - navigationRect.left;
+          const width = activeRect.width;
+          
+          navigationList.style.setProperty('--indicator-left', left + 'px');
+          navigationList.style.setProperty('--indicator-width', width + 'px');
+          
+          // Show the indicator
+          const indicator = navigationList.querySelector('::after') || navigationList;
+          navigationList.style.setProperty('--indicator-opacity', '1');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+
+        // Initialize sliding indicator on load
+        setTimeout(initSlidingIndicator, 100);
+
+        // Mobile menu functions
+        function openMobileMenu() {
+          mobileMenuToggle.classList.add('active');
+          mobileMenuOverlay.classList.add('active');
+          mobileMenu.classList.add('active');
+          body.classList.add('mobile-menu-open');
+        }
+
+        function closeMobileMenu() {
+          mobileMenuToggle.classList.remove('active');
+          mobileMenuOverlay.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('mobile-menu-open');
+        }
+
+        // Event listeners
+        mobileMenuToggle.addEventListener('click', function() {
+          if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking nav items
+        const mobileNavItems = document.querySelectorAll('.mobile-navigation-item');
+        mobileNavItems.forEach(item => {
+          item.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Close menu on window resize (desktop)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Scroll Fade-In Animation
+        function initScrollFadeIn() {
+          const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
+          
+          // Don't animate if user prefers reduced motion
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            fadeElements.forEach(element => {
+              element.classList.add('fade-in-visible');
+            });
+            return;
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+              }
+            });
+          }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          });
+
+          fadeElements.forEach(element => {
+            observer.observe(element);
+          });
+        }
+
+        // Initialize fade-in animations
+        initScrollFadeIn();
+
+        // Hero Logo Animation
+        function initHeroLogoAnimation() {
+          const heroContainer = document.querySelector('.hero-image-container');
+          const heroLogo = document.querySelector('#hero-logo');
+          const heroProfile = document.querySelector('#home-profile-portrait');
+          
+          if (!heroContainer || !heroLogo || !heroProfile) return;
+
+          // Track current state (starts with logo visible)
+          let isShowingProfile = false;
+          let isAnimating = false;
+
+          // Add initial animations
+          heroContainer.classList.add('hero-container-initial-animation');
+          heroLogo.classList.add('hero-logo-initial-preview');
+          heroProfile.classList.add('hero-profile-initial-preview');
+
+          // Add click to flip functionality
+          heroContainer.addEventListener('click', function() {
+            if (isAnimating) return; // Prevent clicks during animation
+            
+            isAnimating = true;
+            
+            // Clear all animation classes first
+            heroContainer.classList.remove('hero-container-initial-animation', 'hero-container-flip-to-profile', 'hero-container-flip-to-logo');
+            heroLogo.classList.remove('hero-logo-initial-preview', 'hero-logo-hide', 'hero-logo-show');
+            heroProfile.classList.remove('hero-profile-initial-preview', 'hero-profile-hide', 'hero-profile-show');
+            
+            if (isShowingProfile) {
+              // Currently showing profile, flip to logo
+              heroContainer.classList.add('hero-container-flip-to-logo');
+              heroProfile.classList.add('hero-profile-hide');
+              heroLogo.classList.add('hero-logo-show');
+              isShowingProfile = false;
+            } else {
+              // Currently showing logo, flip to profile  
+              heroContainer.classList.add('hero-container-flip-to-profile');
+              heroLogo.classList.add('hero-logo-hide');
+              heroProfile.classList.add('hero-profile-show');
+              isShowingProfile = true;
+            }
+            
+            // Reset animation lock after animation completes
+            setTimeout(() => {
+              isAnimating = false;
+            }, 800);
+          });
+
+          // State remains false since animation ends on logo side
+          
+          // Add hover hint
+          heroContainer.style.cursor = 'pointer';
+          heroContainer.title = 'Click to flip between logo and photo';
+        }
+
+        // Initialize hero animation
+        initHeroLogoAnimation();
+      });
+    </script>
   </body>
 </html>

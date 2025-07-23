@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Willem Crone's Portfolio</title>
-    <link rel="shortcut icon" href="img/willcronelogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8"/>
-  </head>
-  <body>
-    <header class="page-header">
-      <img src="img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-      <nav class="main-navigation page-header__item">
+
+<head>
+  <title>Willem Crone's Portfolio</title>
+  <link rel="shortcut icon" href="img/willcronelogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__item">
+        <a href="index.html">
+          <img src="img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="page-header__item">
         <ul role="menubar" class="navigation-list">
           <li role="presentation">
             <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
@@ -21,117 +31,381 @@
             <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
           </li>
           <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Portfolio</a>
+            <a href="work.html" role="menuitem"
+              class="navigation-list__item navigation-list__item--active">Portfolio</a>
           </li>
           <li role="presentation">
             <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <section id="work-grid">
-      <h1 id="work-header">Portfolio</h1>
-      <div class="grid">
-        <div class="grid__item">
-          <h2 class="grid-item-header>">Benjamin Britton Photography</h2>
-          <div class="work-grid-text-container">
-            <p>
-              Benjamin Britton is a wedding and engagement photographer from northeast Ohio. This slick custom site, built with React.js, showcases his special artistic sensibilities and unique personality within an easily navigable framework that allows potential customers to easily view his work, check out his pricing packages, read his blog, or contact him for a session!
-            </p>
-          </div>
-          <img src="img/ben-photo-site-image.png" alt="Benjamin Britton Photography Site Image" class="work-grid-image">
-          <br>
-          <a href="work/ben-photo.html" class="button__secondary">View project</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" type="button">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="grid__item">
-          <h2>Chat-App</h2>
-          <div class="work-grid-text-container">
-            <p>
-              The Chat-App is a mobile app built using React-Native and Expo.io with an assist from the GiftedChat library. This single-room chat interface allows users to send messages, photos, and their current location. Messages and photos are stored via Google Firebase.
-            </p>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <button class="mobile-menu-close" aria-label="Close mobile menu" type="button"></button>
+    <ul class="mobile-navigation-list">
+      <li>
+        <a href="index.html" class="mobile-navigation-item">Home</a>
+      </li>
+      <li>
+        <a href="about.html" class="mobile-navigation-item">About</a>
+      </li>
+      <li>
+        <a href="work.html" class="mobile-navigation-item mobile-navigation-item--active">Portfolio</a>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-navigation-item">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="work-grid">
+    <h1 id="work-header">Portfolio</h1>
+
+    <!-- Project Tabs -->
+    <div class="project-tabs">
+      <button class="tab-button tab-button--active" data-tab="web">Web</button>
+      <button class="tab-button" data-tab="mobile">Mobile</button>
+    </div>
+
+    <div class="grid">
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/keck-medicine-homepage.png" alt="Keck Medicine of USC Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Keck Medicine of USC</h2>
+          <p>
+            Led full website redesign consolidating 23 sub-sites into unified WordPress enterprise application serving
+            ~1 million monthly users. Built custom Find a Location and Find a Provider search tools with Google Maps
+            integration, global search functionality using Pantheon Solr, and comprehensive template library. Mentored
+            client development team and delivered performance improvements that helped outrank LA-area healthcare
+            competition in SEO metrics.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> WordPress, Gutenberg, ACF, Yoast SEO, Azure, Google Maps, Solr</p>
           </div>
-          <img src="img/chat-app.PNG" alt="Chat App Image" class="work-grid-image-mobile">
-          <img src="img/chat-app-preview1.PNG" alt="Chat App Image" class="work-grid-image-mobile">
-          <br>
-          <a href="work/chat-app.html" class="button__secondary">View Project</a>
         </div>
-        <div class="grid__item">
-          <h2 class="grid-item-header>">SocialApe</h2>
-          <div class="work-grid-text-container">
-            <p>
-              Built from back to front using Google Firebase and React, this cutting-edge social media app allows users to create profiles and scream to their fellow Apes!
-            </p>
-          </div>
-          <img src="img/socialape-site-image.png" alt="SocialApe App Image" class="work-grid-image">
-          <br>
-          <a href="work/socialape.html" class="button__secondary">View project</a>
-        </div>
-        <div class="grid__item">
-          <h2 class="grid-item-header>">React Tetris</h2>
-          <div class="work-grid-text-container">
-            <p>
-              Who doesn't love the timeless arcade game of Tetris? This fresh rendition of a classic is built from scratch with React.js for optimal performance. 
-            </p>
-          </div>
-          <img src="img/react-tetris-preview1.png" alt="React Tetris App Image" class="work-grid-image">
-          <br>
-          <a href="work/react-tetris.html" class="button__secondary">View project</a>
-        </div>
-        <div class="grid__item">
-          <h2 class="grid-item-header>">devel_Up+</h2>
-          <div class="work-grid-text-container">
-            <p>
-              A serverless progressive web app (PWA) built with React that allows users to view upcoming events in the world of web development from an integrated Google Calendar. Users are able to sign in with their Google account and access the app offline.
-            </p>
-          </div>
-          <img src="img/devel_up-site-image.png" alt="devel_Up App Image" class="work-grid-image">
-          <br>
-          <a href="work/devel_up.html" class="button__secondary">View project</a>
-        </div>
-        <div class="grid__item">
-          <h2 class="grid-item-header>">Star Wars Central</h2>
-          <div class="work-grid-text-container">
-            <p>
-              Star Wars Central is a full-stack web app that allows users to create an account and view information about their favorite Star Wars films! This project was built back to front using the MEAN stack (MongoDB, Express, Angular, Node.js).
-            </p>
-          </div>
-          <img src="img/starwarscentral-site-image.png" alt="Star Wars Central Image" class="work-grid-image">
-          <br>
-          <a href="work/starwarscentral.html" class="button__secondary">View project</a>
-        </div>
-        <div class="grid__item">
-          <h2 class="grid-item-header>">Pokédex App</h2>
-          <div class="work-grid-text-container">
-            <p>
-              The Pokédex App is a small web application developed as a front-end client that makes use of an external public API (PokéAPI) to return data about all 1050 Pokémon! The app was built with HTML, CSS, and object-oriented JavaScript, and also utilizes both JQuery and Bootstrap libraries.
-            </p>
-          </div>
-          <img src="img/pokedex-app-image.png" alt="pokedex-app-image" class="work-grid-image">
-          <br>
-          <a href="work/pokedex-app.html" class="button__secondary">View project</a>
-        </div>
+
+        <a href="work/keck-medicine.html" class="button__secondary">View project</a>
       </div>
-      <br><br>
-      <div class="work-together">
-        <p>Interested in Working Together?</p><br>
-        <a href="contact.html" class="button">Contact Me</a><br><br><br><br/>
-      </div>
-    </section>
-    <footer class="page-footer">
-      <div class="find-me-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-          <a href="https://github.com/willcrone11" target="_blank">
-            <img src="img/github_icon.svg" alt="github">
-          </a>
-          <a href="https://www.instagram.com/will_crone/?hl=en/" target="_blank">
-            <img src="img/instagram_icon.svg" alt="instagram">
-          </a>
-          <a href="https://www.linkedin.com/in/willem-crone/" target="_blank">
-            <img src="img/linkedin_icon.svg" alt="linkedin">
-          </a>
+
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/vanderbilt-homepage.png" alt="Vanderbilt Health Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Vanderbilt Health Ecosystem</h2>
+          <p>
+            Inherited and modernized complex 6-year-old headless Drupal ecosystem serving 3 frontends. Consolidated 6
+            repositories into 3, migrated from deprecated Amazon Beanstalk to AWS Amplify, completed Next.js upgrade
+            requiring near-complete frontend refactor, and reduced security vulnerabilities from 1,100+ to 250.
+            Implemented automated integrations and reduced test runtime by 80%.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> Drupal (Headless), React, Next.js, AWS Amplify, CloudSearch, Jenkins,
+              Yext, PHP, JavaScript</p>
+          </div>
         </div>
+
+        <a href="work/vanderbilt-health.html" class="button__secondary">View project</a>
       </div>
-    </footer>
-  </body>
+
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/VSP-home.png" alt="Vanderbilt Specialty Pharmacy Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Vanderbilt Specialty Pharmacy</h2>
+          <p>
+            Led complete website redesign using atomic design principles and component-based architecture. Delivered
+            project 2 months ahead of schedule, creating 20+ reusable components across 5 page templates. Built scalable
+            component library designed for reuse across 500+ sites in Vanderbilt ecosystem, successfully addressing
+            diverse user needs for patients, manufacturers, providers, and researchers.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> Drupal, Twig, PHP, Pantheon, GitHub, jQuery, SCSS</p>
+          </div>
+        </div>
+
+        <a href="work/vanderbilt-specialty-pharmacy.html" class="button__secondary">View project</a>
+      </div>
+
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/luminis-1.png" alt="Luminis Health Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Luminis Health</h2>
+          <p>
+            Supported post-launch stabilization and feature development for enterprise healthcare site. Worked in agile
+            environment addressing high-priority bugs and implementing new features including MyChart integration with
+            custom dashboard and innovative Find Care tool that guides users through personalized flows to easily
+            schedule appointments with care providers.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> Drupal, Twig, PHP, JavaScript, SCSS, jQuery, Acquia, Bitbucket</p>
+          </div>
+        </div>
+
+        <a href="work/luminis-health.html" class="button__secondary">View project</a>
+      </div>
+
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/crh-1.png" alt="Chesapeake Regional Health System Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Chesapeake Regional Health System</h2>
+          <p>
+            Modernized legacy infrastructure by implementing first-ever Bitbucket pipeline, automating configuration
+            sync, and upgrading Angular dependencies from v9 to current version. Created custom Drupal module for
+            automated Press Ganey API integration for nightly doctor review updates. Implemented complete homepage
+            redesign and brought outdated project into modern era.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> Drupal, PHP, Bitbucket Pipelines, Angular, SCSS, Tailwind, Pantheon</p>
+          </div>
+        </div>
+
+        <a href="work/chesapeake-regional.html" class="button__secondary">View project</a>
+      </div>
+
+      <div class="grid__item project-item project-item--web fade-in-section">
+        <img src="img/siteman-6.png" alt="Siteman Cancer Center Homepage" class="work-grid-image">
+
+        <div class="work-grid-text-container">
+          <h2>Siteman Cancer Center</h2>
+          <p>
+            Current project involving full website redesign while managing maintenance of existing site. Successfully
+            migrated from on-premises to Pantheon hosting and developed specialized pediatric cancer content templates.
+            Actively consulting on comprehensive WordPress rebuild launching mid-2026, designed to help patients
+            identify their needs and access appropriate care throughout their cancer journey.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> WordPress, JavaScript, SCSS, Relevanssi, Yoast SEO, ACF, Gutenberg</p>
+          </div>
+        </div>
+
+        <a href="work/siteman-cancer-center.html" class="button__secondary">View project</a>
+      </div>
+
+      <div class="grid__item project-item project-item--mobile fade-in-section">
+
+
+        <div class="work-grid-text-container">
+          <h2>MHO Reflections Companion</h2>
+          <p>
+            Built mental health companion mobile app from scratch using Ionic, React, and TypeScript. Implemented
+            comprehensive feature set including user profiles, daily check-ins, mental health assessments, data
+            visualization, and journaling interface. Successfully launched on both iOS App Store and Google Play Store,
+            serving 50+ active mental health patients.
+          </p>
+          <div class="technologies">
+            <p><strong>Technologies:</strong> Ionic, React, TypeScript, SCSS, XCode, Android Studio</p>
+          </div>
+        </div>
+
+        <div class="mobile-app-gallery">
+          <div class="mobile-screenshot-grid">
+            <img src="img/MHO-home.png" alt="MHO Reflections Home Screen" class="mobile-screenshot fade-in-stagger fade-in-delay-1">
+            <img src="img/MHO-assessment.png" alt="MHO Assessment Screen" class="mobile-screenshot fade-in-stagger fade-in-delay-2">
+            <img src="img/MHO-journal.png" alt="MHO Journal Interface" class="mobile-screenshot fade-in-stagger fade-in-delay-3">
+            <img src="img/MHO-assessment-completed.png" alt="MHO Assessment Completed" class="mobile-screenshot fade-in-stagger fade-in-delay-4">
+            <img src="img/MHO-resources.png" alt="MHO Resources Screen" class="mobile-screenshot fade-in-stagger fade-in-delay-5">
+          </div>
+        </div>
+
+        <a href="work/mho-reflections.html" class="button__secondary">View project</a>
+      </div>
+    </div>
+    <br><br>
+    <div class="work-together fade-in-section">
+      <p>Interested in Working Together?</p><br>
+      <a href="contact.html" class="button">Contact Me</a><br><br><br><br />
+    </div>
+  </section>
+  <footer class="page-footer">
+    <div class="find-me-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/willcrone11" target="_blank">
+          <img src="img/github_icon.svg" alt="github">
+        </a>
+        <a href="https://www.instagram.com/will_crone/?hl=en/" target="_blank">
+          <img src="img/instagram_icon.svg" alt="instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/willem-crone/" target="_blank">
+          <img src="img/linkedin_icon.svg" alt="linkedin">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Modern Navigation JavaScript
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenuClose = document.querySelector('.mobile-menu-close');
+      const body = document.body;
+      const header = document.querySelector('.page-header');
+      const navigationList = document.querySelector('.navigation-list');
+      const navItems = document.querySelectorAll('.navigation-list__item');
+
+      // Initialize sliding indicator
+      function initSlidingIndicator() {
+        const activeItem = document.querySelector('.navigation-list__item--active');
+        if (activeItem && navigationList) {
+          updateSlidingIndicator(activeItem);
+        }
+      }
+
+      // Update sliding indicator position
+      function updateSlidingIndicator(activeItem) {
+        const navigationRect = navigationList.getBoundingClientRect();
+        const activeRect = activeItem.getBoundingClientRect();
+        const left = activeRect.left - navigationRect.left;
+        const width = activeRect.width;
+
+        navigationList.style.setProperty('--indicator-left', left + 'px');
+        navigationList.style.setProperty('--indicator-width', width + 'px');
+
+        // Show the indicator
+        const indicator = navigationList.querySelector('::after') || navigationList;
+        navigationList.style.setProperty('--indicator-opacity', '1');
+      }
+
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Initialize sliding indicator on load
+      setTimeout(initSlidingIndicator, 100);
+
+      // Mobile menu functions
+      function openMobileMenu() {
+        mobileMenuToggle.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        mobileMenu.classList.add('active');
+        body.classList.add('mobile-menu-open');
+      }
+
+      function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        body.classList.remove('mobile-menu-open');
+      }
+
+      // Event listeners
+      mobileMenuToggle.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+      // Close menu when clicking nav items
+      const mobileNavItems = document.querySelectorAll('.mobile-navigation-item');
+      mobileNavItems.forEach(item => {
+        item.addEventListener('click', closeMobileMenu);
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close menu on window resize (desktop)
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+
+      // Project Tab Switching Functionality
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      // Initialize - show web projects by default
+      showProjects('web');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const tabType = this.getAttribute('data-tab');
+
+          // Update active tab
+          tabButtons.forEach(btn => btn.classList.remove('tab-button--active'));
+          this.classList.add('tab-button--active');
+
+          // Show/hide projects
+          showProjects(tabType);
+        });
+      });
+
+      function showProjects(type) {
+        projectItems.forEach(item => {
+          if (item.classList.contains(`project-item--${type}`)) {
+            item.classList.remove('project-item--hidden');
+          } else {
+            item.classList.add('project-item--hidden');
+          }
+        });
+      }
+
+      // Scroll Fade-In Animation
+      function initScrollFadeIn() {
+        const fadeElements = document.querySelectorAll('.fade-in-section, .fade-in-stagger');
+        
+        // Don't animate if user prefers reduced motion
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          fadeElements.forEach(element => {
+            element.classList.add('fade-in-visible');
+          });
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in-visible');
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(element => {
+          observer.observe(element);
+        });
+      }
+
+      // Initialize fade-in animations
+      initScrollFadeIn();
+    });
+  </script>
+</body>
+
 </html>
