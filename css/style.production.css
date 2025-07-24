@@ -191,13 +191,19 @@ a:hover, a:focus {
   text-align: center;
 }
 
+.about-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .modea-link {
   color:  #fffb09;
 }
 
 .work-together {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 80px auto 60px auto;
   padding: 50px 40px;
   background: linear-gradient(135deg, #3856fd, #4dabf7);
@@ -1485,7 +1491,7 @@ body {
 
 .about-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
@@ -1794,31 +1800,13 @@ body {
 
 .work-together {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 80px auto 60px auto;
   padding: 60px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3856fd, #4dabf7);
   color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.work-together::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(56, 86, 253, 0.3);
 }
 
 .work-together p {
@@ -1826,14 +1814,10 @@ body {
   font-weight: 600;
   margin-bottom: 30px;
   color: #ffffff;
-  position: relative;
-  z-index: 2;
 }
 
 .work-together .button,
 .work-together .button__secondary {
-  position: relative;
-  z-index: 2;
   margin: 0 10px;
   margin-top: 10px;
   display: inline-block;
@@ -1841,7 +1825,7 @@ body {
 
 .work-together .button {
   background: #ffffff;
-  color: #667eea;
+  color: #3856fd;
   font-weight: 700;
   padding: 16px 32px;
   border-radius: 12px;
@@ -1852,6 +1836,25 @@ body {
 .work-together .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.work-together .button__secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.work-together .button__secondary::before {
+  display: none;
+}
+
+.work-together .button__secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 /* Responsive Design */
@@ -2288,7 +2291,7 @@ body {
 
 .looking-for-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
@@ -2333,26 +2336,15 @@ body {
 
 .resume-download-section {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 80px auto 60px auto;
   padding: 60px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3856fd, #4dabf7);
   color: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 60px rgba(56, 86, 253, 0.3);
   position: relative;
   overflow: hidden;
-}
-
-.resume-download-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: float 6s ease-in-out infinite;
 }
 
 .resume-download-section h3 {
@@ -2366,8 +2358,6 @@ body {
 
 .resume-download-section .button,
 .resume-download-section .button__secondary {
-  position: relative;
-  z-index: 2;
   margin: 0 10px;
   margin-top: 10px;
   display: inline-block;
@@ -2375,9 +2365,9 @@ body {
 
 .resume-download-section .button {
   background: #ffffff;
-  color: #667eea;
+  color: #3856fd;
   font-weight: 700;
-  padding: 16px 32px;
+  padding: 14px 28px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
@@ -2386,6 +2376,25 @@ body {
 .resume-download-section .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.resume-download-section .button__secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.resume-download-section .button__secondary::before {
+  display: none;
+}
+
+.resume-download-section .button__secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 /* Connect Animation */
@@ -2587,6 +2596,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.home-hero-image:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
 }
 
 /* Hero Image Container for 3D Animation */
@@ -2958,7 +2972,7 @@ body {
 
 .home-highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   gap: 30px;
 }
 
@@ -3152,26 +3166,15 @@ body {
 
 .home-cta-section {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 80px auto 60px auto;
   padding: 60px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3856fd, #4dabf7);
   color: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 60px rgba(56, 86, 253, 0.3);
   position: relative;
   overflow: hidden;
-}
-
-.home-cta-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: float 6s ease-in-out infinite;
 }
 
 .home-cta-section h3 {
