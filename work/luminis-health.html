@@ -3,48 +3,48 @@
   <head>
     <title>Luminis Health - Willem Crone Portfolio</title>
     <link rel="shortcut icon" href="../img/willcronelogo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.production.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
   </head>
   <body class="portfolio-page-container">
-    <header class="page-header">
-      <img src="../img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-      <nav class="main-navigation page-header__item">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="../about.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
-          <li role="presentation">
-            <a href="../work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
-          </li>
-          <li role="presentation">
-            <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="project-page-header">
+      <div class="project-page-header__container">
+        <div class="project-page-header__logo">
+          <a href="../index.html">
+            <img src="../img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+          </a>
+        </div>
+        
+        <a href="../work.html" class="project-back-button">
+          <span class="project-back-icon">←</span>
+          <span class="project-back-text">Back to Portfolio</span>
+        </a>
+      </div>
     </header>
     
     <section>
+      <!-- Project Title moved above image -->
+      <div class="project-title-container">
+        <h1>Luminis Health</h1>
+        <h3>Post-Launch Stabilization & Feature Development</h3>
+      </div>
+
       <div class="site-image-display-container">
         <img src="../img/luminis-1.png" alt="Luminis Health Homepage" class="site-image">
       </div>
       
       <div class="site-description-container">
-        <h1>Luminis Health</h1>
-        <h3>Enterprise Web Redesign & Post-Launch Support</h3>
-        <p><strong>Role:</strong> Supporting Developer</p>
-        <p><strong>Live Site:</strong> <a href="https://luminishealth.org" target="_blank">luminishealth.org</a></p>
+        <h2>Summary</h2>
+        <p><strong>Role:</strong> Senior Developer (1+ year)</p>
+        <p><strong>Live Site:</strong> <a href="https://www.luminishealth.org" target="_blank">luminishealth.org</a></p>
         <div class="technologies">
           <p><strong>Technologies:</strong> Drupal, Twig, PHP, JavaScript, SCSS, jQuery, Acquia, Bitbucket</p>
         </div>
         <p>
-          Worked as the secondary developer on a 2-person development team for 6 months immediately following the launch of the Luminis Health enterprise healthcare website. Provided critical post-launch support, addressing high-priority bugs and implementing new features during a crucial stabilization period for the newly launched platform.
+          Supported post-launch stabilization and feature development for enterprise healthcare site. Worked in agile environment addressing high-priority bugs and implementing new features including MyChart integration with custom dashboard and innovative Find Care tool that guides users through personalized flows to easily schedule appointments with care providers.
         </p>
       </div>
 
@@ -169,5 +169,21 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Project Page Header JavaScript
+        const header = document.querySelector('.project-page-header');
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      });
+    </script>
   </body>
 </html> 

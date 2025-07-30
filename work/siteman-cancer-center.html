@@ -4,7 +4,7 @@
 <head>
   <title>Siteman Cancer Center - Willem Crone Portfolio</title>
   <link rel="shortcut icon" href="../img/willcronelogo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="../css/style.production.css">
@@ -13,44 +13,41 @@
 </head>
 
 <body class="portfolio-page-container">
-  <header class="page-header">
-    <img src="../img/willcronelogo.png" class="page-header__item" id="logo" alt="logo">
-    <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
-        <li role="presentation">
-          <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="../about.html" role="menuitem" class="navigation-list__item">About</a>
-        </li>
-        <li role="presentation">
-          <a href="../work.html" role="menuitem" class="navigation-list__item">Portfolio</a>
-        </li>
-        <li role="presentation">
-          <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="project-page-header">
+    <div class="project-page-header__container">
+      <div class="project-page-header__logo">
+        <a href="../index.html">
+          <img src="../img/willcronelogo.png" id="logo" alt="Willem Crone Logo">
+        </a>
+      </div>
+      
+      <a href="../work.html" class="project-back-button">
+        <span class="project-back-icon">←</span>
+        <span class="project-back-text">Back to Portfolio</span>
+      </a>
+    </div>
   </header>
-
+  
   <section>
+    <!-- Project Title moved above image -->
+    <div class="project-title-container">
+      <h1>Siteman Cancer Center</h1>
+      <h3>Current Project: Full Website Redesign & WordPress Rebuild</h3>
+    </div>
+
     <div class="site-image-display-container">
       <img src="../img/siteman-6.png" alt="Siteman Cancer Center Homepage" class="site-image">
     </div>
-
+    
     <div class="site-description-container">
-      <h1>Siteman Cancer Center</h1>
-      <h3>Web Maintenance Retainer & Full Website Redesign</h3>
+      <h2>Summary</h2>
       <p><strong>Role:</strong> Lead Developer (Current Project)</p>
-      <p><strong>Live Site:</strong> <a href="https://siteman.wustl.edu/" target="_blank">siteman.wustl.edu</a></p>
+      <p><strong>Live Site:</strong> <a href="https://siteman.wustl.edu" target="_blank">siteman.wustl.edu</a></p>
       <div class="technologies">
         <p><strong>Technologies:</strong> WordPress, JavaScript, SCSS, Relevanssi, Yoast SEO, ACF, Gutenberg</p>
       </div>
       <p>
-        Currently managing the maintenance of a recently inherited cancer center website while simultaneously leading
-        consultation and development for a comprehensive full website redesign launching mid-2026. The project involves
-        modernizing hosting infrastructure, developing specialized pediatric content templates, and creating a
-        patient-centered experience to help individuals navigate their cancer journey.
+        Current project involving full website redesign while managing maintenance of existing site. Successfully migrated from on-premises to Pantheon hosting and developed specialized pediatric cancer content templates. Actively consulting on comprehensive WordPress rebuild launching mid-2026, designed to help patients identify their needs and access appropriate care throughout their cancer journey.
       </p>
     </div>
 
@@ -209,6 +206,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Project Page Header JavaScript
+      const header = document.querySelector('.project-page-header');
+
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

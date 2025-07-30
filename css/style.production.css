@@ -702,6 +702,10 @@ body {
   padding-top: 50px;
 }
 
+.site-image-mho {
+  max-width: 300px;
+}
+
 .site-image-mobile {
   width: 30%;
   height: 100%;
@@ -743,7 +747,7 @@ body {
 
 .site-image-display-container {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 80px 20px;
+  padding: 20px 20px 80px;
   text-align: center;
 }
 
@@ -797,6 +801,7 @@ body {
 
 @media (max-width: 768px) {
   .mobile-grid {
+    grid-template-columns: 1fr;
     gap: 32px;
     max-width: 600px;
   }
@@ -812,7 +817,6 @@ body {
 
 @media (max-width: 480px) {
   .mobile-grid {
-    grid-template-columns: 1fr;
     gap: 28px;
     max-width: 300px;
   }
@@ -932,7 +936,7 @@ body {
 
 /* Enhanced project role and link styling */
 .site-description-container p strong {
-  color: #3856fd;
+  color: #000;
   font-weight: 600;
 }
 
@@ -1099,7 +1103,7 @@ body {
 
 @media (max-width: 480px) {
   .grid__item {
-    padding: 20px;
+    padding: 20px 20px 80px;
   }
   
   #work-header {
@@ -3592,5 +3596,178 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Project Page Header Navigation */
+.project-page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(56, 86, 253, 0.1);
+  padding: 16px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-page-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 24px;
+}
+
+.project-page-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.project-page-header__logo #logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-page-header__logo #logo:hover {
+  transform: scale(1.05);
+}
+
+/* Project Page Back to Portfolio Button */
+.project-back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3856fd;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  background: rgba(56, 86, 253, 0.08);
+  border: 1px solid rgba(56, 86, 253, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.project-back-button:hover {
+  background: rgba(56, 86, 253, 0.15);
+  border-color: rgba(56, 86, 253, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 86, 253, 0.2);
+}
+
+.project-back-icon {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-back-text {
+  display: inline;
+}
+
+/* Project Title Container */
+.project-title-container {
+  text-align: center;
+  margin: 120px auto 40px;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.project-title-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.project-title-container h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Mobile styles for project page header */
+@media (max-width: 768px) {
+  .project-page-header {
+    padding: 12px 16px;
+  }
+  
+  .project-page-header__container {
+    gap: 16px;
+  }
+  
+  .project-page-header__logo #logo {
+    height: 60px;
+  }
+  
+  .project-back-button {
+    font-size: 13px;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .project-back-icon {
+    font-size: 14px;
+  }
+  
+  .project-title-container {
+    margin: 100px auto 30px;
+    padding: 0 16px;
+  }
+  
+  .project-title-container h1 {
+    font-size: 2rem;
+  }
+  
+  .project-title-container h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-page-header {
+    padding: 10px 12px;
+  }
+  
+  .project-page-header__container {
+    gap: 12px;
+  }
+  
+  .project-page-header__logo #logo {
+    height: 50px;
+  }
+  
+  .project-back-button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  .project-back-icon {
+    font-size: 13px;
+  }
+  
+  .project-title-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .project-title-container h3 {
+    font-size: 0.9rem;
   }
 }
