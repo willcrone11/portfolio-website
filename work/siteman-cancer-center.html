@@ -47,7 +47,7 @@
         <p><strong>Technologies:</strong> WordPress, JavaScript, SCSS, Relevanssi, Yoast SEO, ACF, Gutenberg</p>
       </div>
       <p>
-        Current project involving full website redesign while managing maintenance of existing site. Successfully migrated from on-premises to Pantheon hosting and developed specialized pediatric cancer content templates. Actively consulting on comprehensive WordPress rebuild launching mid-2026, designed to help patients identify their needs and access appropriate care throughout their cancer journey.
+        Current project encompassing a full website redesign and ground-up WordPress rebuild alongside ongoing maintenance of the existing production site. Initial work on the existing site focused on infrastructure and performance &mdash; migrating from on-premises to Pantheon hosting, modernizing the deployment pipeline with GitHub Actions and automated code security analysis, implementing advanced caching, and shipping a per-template CSS compilation system &mdash; followed by a dedicated set of pediatric cancer templates and components. Development is now centered on the new site launching mid-2026: a fully custom WordPress theme, a dynamic editor-first content architecture, 19 templates and custom post types, 19 custom Gutenberg components, and a purpose-built visitor-guidance tool &mdash; all delivered in the first seven months of development.
       </p>
     </div>
 
@@ -57,7 +57,7 @@
       <h3>Seamless Agency Transition</h3>
       <p>
         <strong>Inherited Project Management:</strong> Successfully inherited and took over maintenance of the Siteman
-        Cancer Center website from a different agency in winter 2025, ensuring continuity of service and maintaining
+        Cancer Center website from a different agency in the spring of 2025, ensuring continuity of service and maintaining
         critical functionality for cancer patients and their families during the transition period.
       </p>
 
@@ -73,6 +73,68 @@
         <li><strong>Improved Access:</strong> Streamlined database and file access for maintenance and development</li>
         <li><strong>Security Enhancement:</strong> Managed Web Application Firewall (WAF) for improved security</li>
         <li><strong>Performance Optimization:</strong> Better caching and performance optimization tools</li>
+      </ul>
+
+      <h3>Legacy Server Retirement</h3>
+      <p>
+        <strong>Full Ownership of Hosting &amp; Pipeline:</strong> Retired the legacy on-premises servers that had
+        previously hosted the old TEST and LIVE environments. This consolidation gave Modea complete control over the
+        site and deployment pipeline and freed Washington University's IT team from actively managing the infrastructure
+        &mdash; while preserving WashU's ownership of the site and ensuring their IT team retains access whenever
+        needed.
+      </p>
+
+      <h3>CI/CD Pipeline &amp; DevOps Automation</h3>
+      <p>
+        <strong>Modernized Deployment Workflow:</strong> Designed and implemented a fully automated deployment and
+        code-quality pipeline, replacing the previous manual deployment process:
+      </p>
+      <ul>
+        <li><strong>GitHub Actions Deployment:</strong> Built a GitHub Action to automatically deploy code changes to
+          the Pantheon DEV environment, streamlining the path from commit to review</li>
+        <li><strong>Automated Code Security Analysis:</strong> Integrated SonarQube into the pipeline to run static
+          analysis and security scans on every push to <code>main</code>, surfacing vulnerabilities and code-quality
+          issues before they reach production</li>
+        <li><strong>Daily Automated Backups:</strong> Configured daily full-site backups across all three environments
+          (DEV, TEST, LIVE) to ensure reliable disaster recovery and data protection</li>
+      </ul>
+
+      <h2>Performance Optimization &amp; Advanced Caching</h2>
+
+      <h3>Advanced Caching Implementation</h3>
+      <p>
+        <strong>Multi-Layer Caching Strategy:</strong> Implemented a comprehensive caching architecture to dramatically
+        reduce page load times and server load:
+      </p>
+      <ul>
+        <li><strong>Pantheon Advanced Page Cache:</strong> Installed and configured Pantheon's Advanced Page Cache for
+          front-end page/HTML/CSS caching, enabling edge-level delivery of cached responses</li>
+        <li><strong>Object Cache Pro with Redis:</strong> Installed Object Cache Pro backed by Redis for back-end
+          database query caching, significantly reducing database load and improving response times for dynamic
+          content</li>
+      </ul>
+
+      <h3>Per-Template CSS Compilation System</h3>
+      <p>
+        <strong>Rearchitected CSS Delivery:</strong> Overhauled how CSS is compiled and served across the site to
+        eliminate wasted bandwidth and render-blocking resources:
+      </p>
+      <ul>
+        <li><strong>Previous Approach:</strong> All CSS for the entire site was compiled into one massive file and
+          loaded on every page &mdash; slow, resource-intensive, and wasteful</li>
+        <li><strong>New Template-Based Compilation:</strong> Built a new compilation system that loads CSS on a
+          per-template basis, so each page only pulls in the styles it actually needs</li>
+      </ul>
+
+      <h3>Measured Performance Gains</h3>
+      <p>
+        <strong>Real-World Impact:</strong> The combined caching and CSS delivery improvements produced substantial,
+        measurable gains on the homepage:
+      </p>
+      <ul>
+        <li><strong>Lighthouse Performance Score:</strong> Increased from <strong>44</strong> to <strong>78</strong></li>
+        <li><strong>First Contentful Paint:</strong> Reduced from <strong>4.4 seconds</strong> to
+          <strong>1.1 seconds</strong></li>
       </ul>
 
       <h2>Specialized Content Development</h2>
@@ -109,19 +171,132 @@
     </div>
 
     <div class="site-background-container">
-      <h2>Current Impact & Future Vision</h2>
+      <h2>Ground-Up WordPress Rebuild (2026 Launch)</h2>
       <p>
-        <strong>Immediate Improvements:</strong> Since inheriting the project, I've made significant improvements to the
-        hosting infrastructure, content management experience, and specialized pediatric content offering. The migration
-        to Pantheon hosting has improved site reliability and management capabilities.
+        Parallel to the ongoing maintenance of the existing production site, a complete rebuild of the Siteman Cancer
+        Center website is underway for a mid-2026 launch. The new platform is being built from scratch &mdash; new
+        hosting, new WordPress install, new custom theme, and a new content architecture &mdash; with every decision
+        aimed at patient-centered usability on the front end and complete editorial control on the back end. The
+        sections below outline what has been delivered in the first seven months of development.
       </p>
-      <h3>Comprehensive Website Redesign (2026 Launch)</h3>
+
+      <h3>Platform &amp; Development Environment</h3>
+      <ul>
+        <li><strong>Pantheon on WUIT's Custom Upstream:</strong> The new site was provisioned on Pantheon within
+          Washington University IT's custom upstream, allowing the project to inherit WUIT's automatically-managed
+          plugin updates rather than maintaining them in-house</li>
+        <li><strong>Clean WordPress Install:</strong> A fresh WordPress instance was configured from scratch to avoid
+          inheriting technical debt from the legacy site</li>
+        <li><strong>One-Command Local Development:</strong> A local development script lets any developer stand up a
+          complete local environment with a single command, dramatically reducing onboarding time and eliminating
+          environment drift</li>
+        <li><strong>Automated Cache-Busting:</strong> CSS and JavaScript assets are automatically hashed whenever their
+          source files change, eliminating stale-asset issues in production without manual version bumps</li>
+      </ul>
+
+      <h3>Custom Theme, Built from Scratch</h3>
+      <ul>
+        <li><strong>Fully Custom Theme:</strong> The theme was authored from an empty directory rather than forking a
+          starter or parent theme, ensuring every line of code serves a clear purpose</li>
+        <li><strong>Template-Based CSS Loading:</strong> A refined version of the per-template CSS loading system was
+          built into the theme from day one, so each page loads only the styles it actually uses &mdash; producing
+          strong performance characteristics out of the gate</li>
+        <li><strong>Gutenberg Editor Styles:</strong> Front-end styles are pulled directly into the Gutenberg editor,
+          so content editors can see exactly how a component will render without having to save and navigate to the
+          front end &mdash; substantially tightening the editorial feedback loop</li>
+      </ul>
+
+      <h3>Dynamic, Editor-First Content Architecture</h3>
       <p>
-        <strong>Full WordPress Rebuild:</strong> Currently leading consultation and development on a brand new WordPress
-        site that will be built over the course of the next year for a mid-2026 launch. This comprehensive redesign
-        focuses on creating a patient-centered experience that addresses the diverse needs of individuals at different
-        stages of their cancer journey.
+        The codebase was architected around a hybrid model that combines structured content (custom fields) with
+        Gutenberg blocks in a highly composable system. The result is an architecture that is opinionated enough to
+        keep pages on-brand and flexible enough to let editors assemble novel layouts without developer involvement.
+        A single principle has been carried throughout: <strong>every image, string, and piece of content on every
+        page is fully controllable by content editors &mdash; nothing is hardcoded.</strong>
       </p>
+
+      <h3>Templates &amp; Custom Post Types</h3>
+      <p>
+        Implemented to date:
+      </p>
+      <ul>
+        <li>Header, Footer, and Mega Menus</li>
+        <li>Home Page</li>
+        <li>General Page</li>
+        <li>Category A&ndash;Z Page</li>
+        <li>Cancer Types</li>
+        <li>Treatments</li>
+        <li>Provider and Researcher post types</li>
+        <li>Find a Doctor and Find a Researcher search experiences</li>
+        <li>Locations</li>
+        <li>Events and Events Landing Page</li>
+        <li>News &amp; Blog and News Index Page</li>
+        <li>Podcast and Podcast Landing Page</li>
+        <li>Clinical Trials Details Page and Clinical Trials Search</li>
+        <li>Global Search, powered by Relevanssi</li>
+      </ul>
+
+      <h3>19 Custom Gutenberg Components</h3>
+      <p>
+        A reusable block library was designed and built to give editors a consistent, flexible set of building blocks:
+      </p>
+      <ul>
+        <li>Button Repeater</li>
+        <li>CTA Block</li>
+        <li>Navigation Card</li>
+        <li>Navigation Card Matrix</li>
+        <li>Icon Navigation Matrix</li>
+        <li>Accordion</li>
+        <li>Doctor Matrix (in-page doctor search)</li>
+        <li>Patient Story Block</li>
+        <li>Patient Story Carousel</li>
+        <li>Related Videos</li>
+        <li>Related Content</li>
+        <li>Related Events Block</li>
+        <li>Featured Event Block</li>
+        <li>50/50 Block</li>
+        <li>Text &amp; Media Block</li>
+        <li>Location List</li>
+        <li>Clinical Review Block</li>
+        <li>Global Gutenberg Content Sections (reusable content sections defined once and pulled into any page)</li>
+        <li>Find Your Way Tool</li>
+      </ul>
+
+      <h3>Find Your Way Tool</h3>
+      <p>
+        The Find Your Way tool gives editors the ability to author guided wizards &mdash; multi-step, multiple-choice
+        flows that help visitors navigate vast sets of decision paths on their way to the right care pathway, resource,
+        or next step. The editor interface is a fully custom, Miro-like drag-and-drop canvas embedded inside the
+        WordPress admin, built with vanilla JavaScript and SCSS alone (no framework dependencies). Editors can create
+        nodes, connect them with branching logic, and preview the resulting visitor experience without ever leaving
+        the admin.
+      </p>
+      <p>
+        <strong>Demo:</strong>
+        <a href="https://drive.google.com/file/d/1oLo4GFePIhJ4HCAKG5XqgWlkQTKsczla/view?usp=sharing" target="_blank">
+          Find Your Way tool &mdash; editor canvas walkthrough
+        </a>
+      </p>
+
+      <h3>Editorial Experience &amp; Client Reception</h3>
+      <p>
+        Because every template and component was designed to be fully editor-driven &mdash; and because the Gutenberg
+        editor now previews components in their true front-end styles &mdash; client reviews have consistently
+        emphasized clarity and usability. Feedback in ongoing work reviews has included <em>&ldquo;so thoughtful!&rdquo;</em>,
+        <em>&ldquo;you can&rsquo;t get lost, which we love,&rdquo;</em> and <em>&ldquo;that&rsquo;s so incredibly
+        helpful.&rdquo;</em>
+      </p>
+
+      <h3>Delivered in Seven Months</h3>
+      <p>
+        The platform setup, custom theme, dynamic architecture, 19 templates and custom post types, 19 custom
+        Gutenberg components, and the Find Your Way tool were all delivered within the first seven months of
+        development &mdash; with the mid-2026 launch still ahead.
+      </p>
+    </div>
+
+    <div class="site-background-container">
+      <h2>Guiding Vision</h2>
 
       <h3>Patient-Centered Design Philosophy</h3>
       <p>
