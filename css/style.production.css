@@ -457,6 +457,15 @@ a:hover, a:focus {
   display: none;
 }
 
+.navigation-list__item:focus {
+  outline: none;
+}
+
+.navigation-list__item:focus-visible {
+  outline: 2px solid #3856fd;
+  outline-offset: 2px;
+}
+
 /* Mobile Hamburger Menu */
 .mobile-menu-toggle {
   display: flex;
@@ -622,6 +631,15 @@ a:hover, a:focus {
 
 .mobile-navigation-item--active::before {
   display: none;
+}
+
+.mobile-navigation-item:focus {
+  outline: none;
+}
+
+.mobile-navigation-item:focus-visible {
+  outline: 2px solid #3856fd;
+  outline-offset: 2px;
 }
 
 /* Mobile Menu Close Button */
